@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web app & Minecraft Plugin Developer">
+    <meta name="keywords" content="EncryptSL, Nette, Vývojář, Pluginy, Minecraft">
+    <meta name="author" content="EncryptSL">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EncryptSL - Galaxy Way</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+</head>
+<style>
+body {
+  background: #dfdfdf;
+  font-family: 'Ubuntu', sans-serif;
+}
+.content {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 10px;
+}
+.footer {
+  max-width: 500px;
+  margin: auto;
+  background: #600bff;
+  padding: 10px;
+  color: #ffff;
+}
+.footer > a {
+  text-decoration: none;
+  color: #fdc670;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.text-center {
+  text-align: center;
+}
+.button-purple {
+  border-color: rgb(182, 17, 182);
+  background-color: rgb(182, 17, 182);
+}
+.button-small {
+  font-size: .75em;
+  padding: .4rem;
+}
+.social-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-inline-start: initial;
+  margin-inline-end: auto;
+}
+.social-links > li {
+  list-style-type: none;
+  margin: auto;
+  flex-basis: calc(25% - 20px);
+}
+.social-links > li > a {
+  text-decoration: none;
+  color: #000;
+  background-color: rgb(22, 102, 207);
+  padding: 5px;
+  margin: 5px;
+}
+.social-links > li > a:hover {
+  background-color: rgb(51, 129, 230);
+  color: #ffff;
+}
+@media only screen and (max-width: 600px) {
+  .social-links > li > a {
+    text-decoration: none;
+    color: #000;
+    background-color: rgb(22, 102, 207);
+    padding: 5px;
+    margin: 0px;
+  }
+  .social-links > li {
+    list-style-type: none;
+    margin: auto;
+    flex-basis: calc(25% - 20px);
+    padding-bottom: 20px;
+  }
+}
+</style>
+<body>
+    <main class="centered">
+      <div class="content text-center">
+        <p>Hi, i'm <strong>EncryptSL</strong> <span id="age"></span> years old</p>
+        <p>
+          Website and minecraft plugin developer, i love nette, php, kotlin java.
+          If you want contact me send me PM 
+          <a class="button-primary button-small" href="https://discordapp.com/users/185744294865272832">DISCORD</a> OR 
+          <a class="button-primary button-purple button-small" href="mailto:darkmindcoder@gmail.com">E-MAIL</a>
+        </p>
+        <ul class="social-links">
+          <li><a href="https://github.com/EncryptSL" target="_blank">GITHUB</a></li>
+          <li><a href="projects.html" target="_blank">PROJECTS</a></li>
+          <li><a href="https://www.spigotmc.org/members/rydloscz.127028/" target="_blank">SPIGOTMC</a></li>
+          <li><a href="https://ko-fi.com/encryptsl" target="_blank">BUY KOFI</a></li>
+        </ul>
+      </div>
+      <footer class="footer text-center">
+        By <a href="#">EncryptSL</a> &copy; <span id="year"></span>
+      </footer>
+    </main>
+</body>
+<script type="text/javascript">
+    function currentAge() {
+        var diff = (new Date()). getTime() - 923198400000;
+        const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+        const millisec = diff / (1000 * 60 * 60 * 24 * 365.25);
+
+        document.getElementById("age").textContent = millisec;
+        document.getElementById("year").textContent = new Date().getFullYear();
+      }
+      setInterval(currentAge, 1000)
+</script>
+</html>
