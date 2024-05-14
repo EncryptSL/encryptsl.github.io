@@ -52,43 +52,34 @@ body {
   font-size: .75em;
   padding: .4rem;
 }
-.social-links {
+.button-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-inline-start: initial;
-  margin-inline-end: auto;
+  flex-wrap: wrap; /* Allow buttons to wrap to new line if space is limited */
+  gap: 10px; /* Spacing between buttons */
+  justify-content: center;
 }
-.social-links > li {
-  list-style-type: none;
-  margin: auto;
-  flex-basis: calc(25% - 20px);
-}
-.social-links > li > a {
+
+.button {
+  background-color: #3b70db; /* Blue */
+  border: none;
+  color: white;
+  text-align: center;
   text-decoration: none;
-  color: #000;
-  background-color: rgb(22, 102, 207);
-  padding: 5px;
-  margin: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  transition: 0.3s ease all; /* Smooth hover effect */
 }
-.social-links > li > a:hover {
-  background-color: rgb(51, 129, 230);
-  color: #ffff;
+
+.button-kofi {
+  background-color: #32AE29; /* Green */
 }
-@media only screen and (max-width: 600px) {
-  .social-links > li > a {
-    text-decoration: none;
-    color: #000;
-    background-color: rgb(22, 102, 207);
-    padding: 5px;
-    margin: 0px;
-  }
-  .social-links > li {
-    list-style-type: none;
-    margin: auto;
-    flex-basis: calc(25% - 20px);
-    padding-bottom: 20px;
-  }
+
+.button:hover {
+  background-color: #294E99; /* Blue with darker shade on hover */
+}
+.button-kofi:hover {
+  background-color: #40DC34; /* Blue with darker shade on hover */
 }
 </style>
 <body>
@@ -101,12 +92,12 @@ body {
           <a class="button-primary button-small" href="https://discordapp.com/users/185744294865272832">DISCORD</a> OR 
           <a class="button-primary button-purple button-small" href="mailto:darkmindcoder@gmail.com">E-MAIL</a>
         </p>
-        <ul class="social-links">
-          <li><a href="https://github.com/EncryptSL" target="_blank">GITHUB</a></li>
-          <li><a href="projects.html">PROJECTS</a></li>
-          <li><a href="https://www.spigotmc.org/members/rydloscz.127028/" target="_blank">SPIGOTMC</a></li>
-          <li><a href="https://ko-fi.com/encryptsl" target="_blank">BUY KOFI</a></li>
-        </ul>
+        <div class="button-container">
+          <a class="button" href="https://github.com/EncryptSL" target="_blank">GITHUB</a>
+          <a class="button" href="projects.html">PROJECTS</a>
+          <a class="button" href="https://www.spigotmc.org/members/rydloscz.127028/" target="_blank">SPIGOTMC</a>
+          <a class="button button-kofi" href="https://ko-fi.com/encryptsl" target="_blank">BUY KOFI</a>
+        </div>
       </div>
       <footer class="footer text-center">
         By <a href="#">EncryptSL</a> &copy; <span id="year"></span>
