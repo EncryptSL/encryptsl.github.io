@@ -1,112 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Web app & Minecraft Plugin Developer">
-    <meta name="keywords" content="EncryptSL, Nette, Vývojář, Pluginy, Minecraft">
-    <meta name="author" content="EncryptSL">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EncryptSL - Galaxy Way</title>
-    <link rel="icon" type="image/x-icon" href="/assets/icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="description" content="Web app & Minecraft Plugin Developer">
+  <meta name="keywords" content="EncryptSL, Nette, Vývojář, Pluginy, Minecraft">
+  <meta name="author" content="EncryptSL">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EncryptSL - Galaxy Way | Projects</title>
+  <link rel="icon" type="image/x-icon" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
 </head>
 <style>
-body {
-  background: #dfdfdf;
-  font-family: 'Ubuntu', sans-serif;
-}
+  body {
+    background: url('assets/background.webp') no-repeat;
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .content {
+    max-width: 500px;
+    margin: auto;
+    background: #ffffffad;
+    padding: 10px;
+  }
+
+  .footer {
+    max-width: 500px;
+    margin: auto;
+    background: #600bff;
+    padding: 10px;
+    color: #ffff;
+  }
+
+  .footer>a {
+    text-decoration: none;
+    color: #fdc670;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .button-purple {
+    border-color: rgb(182, 17, 182);
+    background-color: rgb(182, 17, 182);
+  }
+
+  .button-small {
+    font-size: .75em;
+    padding: .4rem;
+  }
+
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow buttons to wrap to new line if space is limited */
+    gap: 10px;
+    /* Spacing between buttons */
+    justify-content: center;
+  }
+
+  .button {
+    background-color: #3b70db;
+    /* Blue */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: 0.3s ease all;
+    /* Smooth hover effect */
+  }
+
+  .button-kofi {
+    background-color: #32AE29;
+    /* Green */
+  }
+
+  .button:hover {
+    background-color: #294E99;
+    /* Blue with darker shade on hover */
+  }
+
+  .button-kofi:hover {
+    background-color: #40DC34;
+    /* Blue with darker shade on hover */
+  }
+  .text-start {
+    text-align: start;
+  }
 </style>
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">HOME</a>
-              <a class="nav-link" href="/">BACK</a>
-              <a class="nav-link text-success" href="https://ko-fi.com/encryptsl" target="_blank">SUPPORT ME</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    <section class="container-fluid my-3">
-        <h1 class="h2">PROJECTS</h1>
-        <div class="row">
+  <main class="centered">
+    <section class="content">
+      <h5>Projects</h5>
+      <div class="row text-start">
           <div class="col col-sm-6 mb-3">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title"><a href="https://github.com/encryptsl/echelon" target="_blank">Echelon</a></h3>
-                    Discord bot, own bot created in kotlin with JDA Library.
-                    <p>Included slash commands, games, leveling, economy, intearaction with 3rd image api.</p>
-                </div>
-            </div>
+            <a href="https://github.com/encryptsl/echelon" target="_blank" title="Private Discord Bot">Echelon</a>
+            <p class="magnify">Kotlin Private Discord Bot</p>
           </div>
           <div class="col col-sm-6 mb-3">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title"><a href="#" target="_blank">ZenBeat</a></h3>
-                    DiscordMusic bot with 24/7 repeating playlist created in kotlin with JDA and LavaPlayer Library.
-                    <p>Included slash commands, permissisons, settings with commands, music archive and another stuff.</p>
-                </div>
-            </div>
+            <a href="#" target="_blank" title="">ZenBeat</a>
+            <p class="magnify">Kotlin Private Discord Music Bot</p>
           </div>
           <div class="col col-sm-6 mb-3">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title"><a href="https://github.com/encryptsl/liteeco" target="_blank">LiteEco</a></h3>
-                    Minecraft PaperMC plugin, inspirated by IConomy, created in kotlin.
-                    <p>Economy plugin</p>
-                    <p>Lightway is way of this plugin.</p>
-                    <p>VaultAPI and PlaceholderAPI is supported !</p>
-                    <p>Included command stuff, permissions, settings in config.yml, mysql / sqlite economy synchronization.</p>
-                </div>
-            </div>
+            <a href="https://github.com/encryptsl/liteeco" target="_blank" title="Paper Economy Vault Plugin">LiteEco</a>
+            <p class="magnify">Paper Economy Plugin with Vault support</p>
           </div>
           <div class="col col-sm-6 mb-3">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title"><a href="https://panda.cekuj.net/" target="_blank">PandaProject</a></h3>
-                    PandaProject is api and app where you can add animal images.
-                    <p>API for fetching images in bots or pages, http://panda.cekuj.net/docs/</p>
-                    <p>Included api, administration and approving system by admin.</p>
-                </div>
-            </div>
+            <a href="https://panda.cekuj.net/" target="_blank" title="Application in Nette with RestAPI">PandaProject</a>
+            <p class="magnify">Nette application with rest api for fetch images.</p>
           </div>
           <div class="col col-sm-6 mb-3">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title"><a href="https://www.spigotmc.org/resources/censor-reloaded-advanced-chat-filter.14752/" target="_blank">CensorReloaded</a></h3>
-                    Minecraft Spigot plugin, chat filter.
-                    <p>Regex filtering</p>
-                    <p>Included, detection for dns address, ip address, links and badwords.</p>
-                </div>
-            </div>
+            <a href="https://www.spigotmc.org/resources/censor-reloaded-advanced-chat-filter.14752"
+                target="_blank" title="Bukkit chat plugin">CensorReloaded</a>
+            <p class="magnify">Java Censor Bukkit chat plugin</p>
           </div>
           <div class="col col-sm-6 mb-3">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title"><a href="https://www.youtube.com/shorts/062Igi5guz0" target="_blank">Showcase GameMax Revolt</a></h3>
-                    Showcase of GameMax Revolt case
-                    <p>My OWN PC</p>
-                    <p>Pc Setup</p>
-                    <ul>
-                        <li>CPU Ryzen 3 1200</li>
-                        <li>GPU MSI GTX 750 Ti 2GB hahaha old xD</li>
-                        <li>MOTHERBOARD MSI Tomahawk max b450</li>
-                        <li>RAM Kingston Fury 16 GB 3200 Mhz CL16</li>
-                        <li>PSU Be quiet! PURE POWER 12 M 750W</li>
-                    </ul>
-                </div>
-            </div>
+            <a href="https://www.youtube.com/shorts/062Igi5guz0" target="_blank" title="Showcase of my pc case">Showcase GameMax Revolt</a>
+            <p class="magnify">Showcase of my currenct pc case</p>
           </div>
-        </div>
-      </section>
+      </div>
+      <div class="button-container">
+        <a class="button" href="index.html">HOME</a>
+        <a class="button" href="https://github.com/EncryptSL" target="_blank">GITHUB</a>
+        <a class="button" href="https://www.spigotmc.org/members/rydloscz.127028/" target="_blank">SPIGOTMC</a>
+        <a class="button button-kofi" href="https://ko-fi.com/encryptsl" target="_blank">BUY KOFI</a>
+      </div>
+    </section>
+    <footer class="footer text-center">
+      By <a href="#">EncryptSL</a> &copy; <span id="year"></span>
+    </footer>
+  </main>
 </body>
 <script type="text/javascript">
+  function currentAge() {
+    var diff = (new Date()).getTime() - 923198400000;
+    const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+    const millisec = diff / (1000 * 60 * 60 * 24 * 365.25);
+
+    document.getElementById("age").textContent = millisec;
+    document.getElementById("year").textContent = new Date().getFullYear();
+  }
+  setInterval(currentAge, 1000)
 </script>
+
 </html>

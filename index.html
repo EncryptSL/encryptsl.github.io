@@ -1,119 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Web app & Minecraft Plugin Developer">
-    <meta name="keywords" content="EncryptSL, Nette, Vývojář, Pluginy, Minecraft">
-    <meta name="author" content="EncryptSL">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EncryptSL - Galaxy Way</title>
-    <link rel="icon" type="image/x-icon" href="/assets/icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="Web app & Minecraft Plugin Developer">
+  <meta name="keywords" content="EncryptSL, Nette, Vývojář, Pluginy, Minecraft">
+  <meta name="author" content="EncryptSL">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EncryptSL - Galaxy Way</title>
+  <link rel="icon" type="image/x-icon" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
 </head>
 <style>
-body {
-  background: url('assets/background.webp') no-repeat;
-  background-size: cover;
-  font-family: 'Ubuntu', sans-serif;
-}
-.content {
-  max-width: 500px;
-  margin: auto;
-  background: #ffffffad;
-  padding: 10px;
-}
-.footer {
-  max-width: 500px;
-  margin: auto;
-  background: #600bff;
-  padding: 10px;
-  color: #ffff;
-}
-.footer > a {
-  text-decoration: none;
-  color: #fdc670;
-}
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.text-center {
-  text-align: center;
-}
-.button-purple {
-  border-color: rgb(182, 17, 182);
-  background-color: rgb(182, 17, 182);
-}
-.button-small {
-  font-size: .75em;
-  padding: .4rem;
-}
-.button-container {
-  display: flex;
-  flex-wrap: wrap; /* Allow buttons to wrap to new line if space is limited */
-  gap: 10px; /* Spacing between buttons */
-  justify-content: center;
-}
+  body {
+    background: url('assets/background.webp') no-repeat;
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+  }
 
-.button {
-  background-color: #3b70db; /* Blue */
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 5px; /* Rounded corners */
-  transition: 0.3s ease all; /* Smooth hover effect */
-}
+  .content {
+    max-width: 500px;
+    margin: auto;
+    background: #ffffffad;
+    padding: 10px;
+  }
 
-.button-kofi {
-  background-color: #32AE29; /* Green */
-}
+  .contact-me {
+    max-width: 500px;
+    margin: auto;
+    background: #001f7994;
+    padding: 10px;
+    color: #ffff!important;
+  }
 
-.button:hover {
-  background-color: #294E99; /* Blue with darker shade on hover */
-}
-.button-kofi:hover {
-  background-color: #40DC34; /* Blue with darker shade on hover */
-}
+  .footer {
+    max-width: 500px;
+    margin: auto;
+    background: #600bff;
+    padding: 10px;
+    color: #ffff;
+  }
+
+  .footer>a {
+    text-decoration: none;
+    color: #fdc670;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .button-purple {
+    border-color: rgb(182, 17, 182)!important;
+    background-color: rgb(182, 17, 182)!important;
+  }
+
+  .button-small {
+    font-size: .75em;
+    padding: .4rem;
+  }
+
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow buttons to wrap to new line if space is limited */
+    gap: 10px;
+    /* Spacing between buttons */
+    justify-content: center;
+  }
+
+  .button {
+    background: #3b70db;
+    /* Blue */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: 0.3s ease all;
+    /* Smooth hover effect */
+  }
+
+  .button-kofi {
+    background-color: #32AE29;
+    /* Green */
+  }
+
+  .button:hover {
+    background-color: #294E99;
+    /* Blue with darker shade on hover */
+  }
+
+  .button-kofi:hover {
+    background-color: #40DC34;
+    /* Blue with darker shade on hover */
+  }
+
+  .contact-button {
+    margin: 0!important;
+  }
+
+  .text-start {
+    text-align: start;
+  }
+
+  .align-items-center {
+    align-items: center !important;
+  }
+  .justify-content-between {
+    justify-content: space-between !important;
+  }
+  .d-flex {
+    display: flex!important;
+  }
 </style>
+
 <body>
-    <main class="centered">
-      <div class="content text-center">
-        <p>Hi, i'm <strong>EncryptSL</strong> <span id="age"></span> years old</p>
-        <p>
-          Website and minecraft plugin developer, i love nette, php, kotlin java.
-          If you want contact me send me PM 
-          <a class="button-primary button-small" href="https://discordapp.com/users/185744294865272832">DISCORD</a> OR 
-          <a class="button-primary button-purple button-small" href="mailto:darkmindcoder@gmail.com">E-MAIL</a>
-        </p>
-        <div class="button-container">
-          <a class="button" href="https://github.com/EncryptSL" target="_blank">GITHUB</a>
-          <a class="button" href="projects.html">PROJECTS</a>
-          <a class="button" href="https://www.spigotmc.org/members/rydloscz.127028/" target="_blank">SPIGOTMC</a>
-          <a class="button button-kofi" href="https://ko-fi.com/encryptsl" target="_blank">BUY KOFI</a>
-        </div>
+  <main class="centered">
+    <div class="content text-center">
+      <p>Hi, i'm <strong>EncryptSL</strong> <span id="age"></span> years old</p>
+      <p>
+        Website and minecraft plugin developer, i love nette, php, kotlin java.
+        If you want contact me send me PM
+        <a class="button-primary button-small" href="https://discordapp.com/users/185744294865272832">DISCORD</a>
+      </p>
+      <div class="button-container">
+        <a class="button" href="projects.html">PROJECTS</a>
+        <a class="button" href="https://github.com/EncryptSL" target="_blank">GITHUB</a>
+        <a class="button" href="https://www.spigotmc.org/members/rydloscz.127028/" target="_blank">SPIGOTMC</a>
+        <a class="button button-kofi" href="https://ko-fi.com/encryptsl" target="_blank">BUY KOFI</a>
       </div>
-      <footer class="footer text-center">
-        By <a href="#">EncryptSL</a> &copy; <span id="year"></span>
-      </footer>
-    </main>
+    </div>
+    <div class="contact-me">
+      <div class="d-flex justify-content-between align-items-center">
+          <span><h6 style="color:#ffff!important;margin: 0!important;">Here you can contact me</h6></span>
+          <a class="button contact-button button-purple" href="mailto:darkmindcoder@gmail.com">E-MAIL</a>
+      </div>
+    </div>
+    <footer class="footer text-center">
+      By <a href="#">EncryptSL</a> &copy; <span id="year"></span>
+    </footer>
+  </main>
 </body>
 <script type="text/javascript">
-    function currentAge() {
-        var diff = (new Date()). getTime() - 923198400000;
-        const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
-        const millisec = diff / (1000 * 60 * 60 * 24 * 365.25);
+  function currentAge() {
+    var diff = (new Date()).getTime() - 923198400000;
+    const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+    const millisec = diff / (1000 * 60 * 60 * 24 * 365.25);
 
-        document.getElementById("age").textContent = millisec;
-        document.getElementById("year").textContent = new Date().getFullYear();
-      }
-      setInterval(currentAge, 1000)
+    document.getElementById("age").textContent = millisec;
+    document.getElementById("year").textContent = new Date().getFullYear();
+  }
+  setInterval(currentAge, 1000)
 </script>
+
 </html>
