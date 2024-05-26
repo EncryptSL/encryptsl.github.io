@@ -105,7 +105,7 @@
   }
 </style>
 
-<body>
+<body id="page">
   <main class="centered">
     <section class="content">
       <h5>Projects</h5>
@@ -149,6 +149,13 @@
   </main>
 </body>
 <script type="text/javascript">
+  const now = new Date();
+  const hours = now.getHours();
+  if (hours > 18 || hours < 5) {
+      document.getElementById('page').style.backgroundImage="url(assets/background_night_press.webp)";
+  } else {
+      document.getElementById('page').style.backgroundImage="url(assets/background.webp)";
+  }
   function currentAge() {
     var diff = (new Date()).getTime() - 923198400000;
     const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
