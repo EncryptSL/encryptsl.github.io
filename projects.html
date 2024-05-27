@@ -103,6 +103,16 @@
   .text-start {
     text-align: start;
   }
+  @media only screen and (min-width: 375px) { 
+    .centered {
+      min-width: 350px;
+    }
+   }
+  @media screen and (min-width: 360px) {
+    .centered {
+      min-width: 350px;
+    }
+  }
 </style>
 
 <body id="page">
@@ -156,15 +166,6 @@
   } else {
       document.getElementById('page').style.backgroundImage="url(assets/background.webp)";
   }
-  function currentAge() {
-    var diff = (new Date()).getTime() - 923198400000;
-    const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
-    const millisec = diff / (1000 * 60 * 60 * 24 * 365.25);
-
-    document.getElementById("age").textContent = millisec;
-    document.getElementById("year").textContent = new Date().getFullYear();
-  }
-  setInterval(currentAge, 1000)
 </script>
 
 </html>
