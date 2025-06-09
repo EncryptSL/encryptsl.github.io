@@ -1,171 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Web app & Minecraft Plugin Developer">
-  <meta name="keywords" content="EncryptSL, Nette, Vývojář, Pluginy, Minecraft">
-  <meta name="author" content="EncryptSL">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EncryptSL - Galaxy Way | Projects</title>
-  <link rel="icon" type="image/x-icon" href="/assets/icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EncryptSL Projects Page" />
+  <title>EncryptSL - Projects</title>
+  <link rel="icon" type="image/x-icon" href="/assets/icon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
 </head>
-<style>
-  body {
-    background: url('assets/background.webp') no-repeat;
-    background-size: cover;
-    font-family: 'Ubuntu', sans-serif;
-  }
-
-  .content {
-    max-width: 500px;
-    margin: auto;
-    background: #ffffffad;
-    padding: 10px;
-  }
-
-  .footer {
-    max-width: 500px;
-    margin: auto;
-    background: #600bff;
-    padding: 10px;
-    color: #ffff;
-  }
-
-  .footer>a {
-    text-decoration: none;
-    color: #fdc670;
-  }
-
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .text-center {
-    text-align: center;
-  }
-
-  .button-purple {
-    border-color: rgb(182, 17, 182);
-    background-color: rgb(182, 17, 182);
-  }
-
-  .button-small {
-    font-size: .75em;
-    padding: .4rem;
-  }
-
-  .button-container {
-    display: flex;
-    flex-wrap: wrap;
-    /* Allow buttons to wrap to new line if space is limited */
-    gap: 10px;
-    /* Spacing between buttons */
-    justify-content: center;
-  }
-
-  .button {
-    background-color: #3b70db;
-    /* Blue */
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
-    /* Rounded corners */
-    transition: 0.3s ease all;
-    /* Smooth hover effect */
-  }
-
-  .button-kofi {
-    background-color: #32AE29;
-    /* Green */
-  }
-
-  .button:hover {
-    background-color: #294E99;
-    /* Blue with darker shade on hover */
-  }
-
-  .button-kofi:hover {
-    background-color: #40DC34;
-    /* Blue with darker shade on hover */
-  }
-  .text-start {
-    text-align: start;
-  }
-  @media only screen and (min-width: 375px) { 
-    .centered {
-      min-width: 350px;
-    }
-   }
-  @media screen and (min-width: 360px) {
-    .centered {
-      min-width: 350px;
-    }
-  }
-</style>
-
-<body id="page">
-  <main class="centered">
-    <section class="content">
-      <h5>Projects</h5>
-      <div class="row text-start">
-          <div class="col col-sm-6 mb-3">
-            <a href="https://github.com/encryptsl/echelon" target="_blank" title="Private Discord Bot">Echelon</a>
-            <p class="magnify">Kotlin Private Discord Bot</p>
-          </div>
-          <div class="col col-sm-6 mb-3">
-            <a href="#" target="_blank" title="">ZenBeat</a>
-            <p class="magnify">Kotlin Private Discord Music Bot</p>
-          </div>
-          <div class="col col-sm-6 mb-3">
-            <a href="https://github.com/encryptsl/liteeco" target="_blank" title="Paper Economy Vault Plugin">LiteEco</a>
-            <p class="magnify">Paper Economy Plugin with Vault support</p>
-          </div>
-          <div class="col col-sm-6 mb-3">
-            <a href="https://panda.cekuj.net/" target="_blank" title="Application in Nette with RestAPI">PandaProject</a>
-            <p class="magnify">Nette application with rest api for fetch images.</p>
-          </div>
-          <div class="col col-sm-6 mb-3">
-            <a href="https://www.spigotmc.org/resources/censor-reloaded-advanced-chat-filter.14752"
-                target="_blank" title="Bukkit chat plugin">CensorReloaded</a>
-            <p class="magnify">Java Censor Bukkit chat plugin</p>
-          </div>
-          <div class="col col-sm-6 mb-3">
-            <a href="https://www.youtube.com/shorts/062Igi5guz0" target="_blank" title="Showcase of my pc case">Showcase GameMax Revolt</a>
-            <p class="magnify">Showcase of my currenct pc case</p>
-          </div>
+<body id="page" class="min-h-screen flex items-center justify-center px-4 bg-cover bg-no-repeat">
+  <main class="backdrop-blur-lg bg-white/20 border border-white/30 rounded-xl shadow-xl p-8 w-full max-w-3xl">
+    <h1 class="text-3xl font-bold text-white text-center mb-8">My Projects</h1>
+    
+    <div class="grid sm:grid-cols-2 gap-6 text-white text-sm">
+      <div class="transition transform hover:scale-105">
+        <a href="https://github.com/encryptsl/echelon" class="font-semibold underline">Echelon</a>
+        <p>Kotlin Private Discord Bot</p>
       </div>
-      <div class="button-container">
-        <a class="button" href="index.html">HOME</a>
-        <a class="button" href="https://github.com/EncryptSL" target="_blank">GITHUB</a>
-        <a class="button" href="https://www.spigotmc.org/members/rydloscz.127028/" target="_blank">SPIGOTMC</a>
-        <a class="button button-kofi" href="https://ko-fi.com/encryptsl" target="_blank">BUY KOFI</a>
+      <div class="transition transform hover:scale-105">
+        <a href="#" class="font-semibold underline">ZenBeat</a>
+        <p>Kotlin Private Discord Music Bot</p>
       </div>
-    </section>
-    <footer class="footer text-center">
-      By <a href="#">EncryptSL</a> &copy; <span id="year"></span>
+      <div class="transition transform hover:scale-105">
+        <a href="https://github.com/encryptsl/liteeco" class="font-semibold underline">LiteEco</a>
+        <p>Paper Economy Plugin with Vault support</p>
+      </div>
+      <div class="transition transform hover:scale-105">
+        <a href="https://panda.cekuj.net/" class="font-semibold underline">PandaProject</a>
+        <p>Nette app with REST API for image fetching</p>
+      </div>
+      <div class="transition transform hover:scale-105">
+        <a href="https://www.spigotmc.org/resources/censor-reloaded-advanced-chat-filter.14752" class="font-semibold underline">CensorReloaded</a>
+        <p>Java Bukkit Chat Plugin</p>
+      </div>
+      <div class="transition transform hover:scale-105">
+        <a href="https://www.youtube.com/shorts/062Igi5guz0" class="font-semibold underline">GameMax Revolt Showcase</a>
+        <p>My current PC case</p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-4 mt-8">
+      <a href="index.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition">HOME</a>
+      <a href="https://github.com/EncryptSL" target="_blank" class="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition">GITHUB</a>
+      <a href="https://www.spigotmc.org/members/rydloscz.127028/" target="_blank" class="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg transition">SPIGOTMC</a>
+      <a href="https://ko-fi.com/encryptsl" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition">BUY KOFI</a>
+    </div>
+
+    <footer class="text-center text-white mt-8 text-sm">
+      By <a href="#" class="text-yellow-300">EncryptSL</a> © <span id="year"></span>
     </footer>
   </main>
-</body>
-<script type="text/javascript">
-  const now = new Date();
-  const hours = now.getHours();
-  if (hours > 18 || hours < 5) {
-      document.getElementById('page').style.backgroundImage="url(assets/background_night_press.webp)";
-  } else {
-      document.getElementById('page').style.backgroundImage="url(assets/background.webp)";
-  }
-</script>
 
+  <script>
+    const now = new Date();
+    const h = now.getHours();
+    document.getElementById("page").style.backgroundImage =
+      (h > 18 || h < 5)
+        ? "url('assets/background_night_press.webp')"
+        : "url('assets/background.webp')";
+    document.getElementById("year").textContent = now.getFullYear();
+  </script>
+</body>
 </html>
