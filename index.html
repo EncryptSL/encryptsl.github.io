@@ -2,71 +2,102 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EncryptSL - Developer</title>
-  <link rel="icon" type="image/x-icon" href="/assets/icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: url('assets/background.webp') no-repeat center center fixed;
-      background-size: cover;
-    }
-    .glass {
-      backdrop-filter: blur(10px);
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EncryptSL - Developer</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: url('assets/background.webp') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .glass {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
 </head>
 
-<body class="flex items-center justify-center min-h-screen px-4">
-  <main class="glass rounded-xl shadow-xl p-8 max-w-lg w-full text-white">
-    <div class="flex flex-col items-center text-center space-y-4">
-      <img src="https://media1.tenor.com/m/GOabrbLMl4AAAAAd/plink-cat-plink.gif" alt="avatar" class="w-40 h-40 rounded-xl border border-white" />
-      <h1 class="text-2xl font-semibold">Hi, I'm EncryptSL <span id="age"></span></h1>
-      <p>Website & Minecraft plugin developer.<br />I love Nette, PHP, Kotlin & Java.</p>
-      <a href="https://discordapp.com/users/185744294865272832" class="bg-indigo-500 hover:bg-indigo-600 transition px-4 py-2 rounded text-sm font-medium">Discord</a>
+<body class="bg-cover bg-center" style="background-image: url('assets/background.webp')">
+    <div class="flex flex-col items-center justify-center min-h-screen px-4 py-10 gap-6">
 
-      <div class="flex flex-wrap justify-center gap-3 pt-4">
-        <a href="projects.html" class="bg-blue-600 hover:bg-blue-700 transition px-4 py-2 rounded">Projects</a>
-        <a href="https://github.com/EncryptSL" target="_blank" class="bg-gray-800 hover:bg-gray-900 transition px-4 py-2 rounded">GitHub</a>
-        <a href="https://www.spigotmc.org/members/rydloscz.127028/" target="_blank" class="bg-yellow-600 hover:bg-yellow-700 transition px-4 py-2 rounded">SpigotMC</a>
-        <a href="https://open.spotify.com/playlist/4aKjPgxfkuH6DtGvn27sE8?si=5ec3e5f3eff44d55" target="_blank" class="bg-green-500 hover:bg-green-600 transition px-4 py-2 rounded">Spotify</a>
-        <a href="https://ko-fi.com/encryptsl" target="_blank" class="bg-pink-500 hover:bg-pink-600 transition px-4 py-2 rounded">Donate</a>
-      </div>
+        <!-- OBSAH (2 karty vedle sebe) -->
+        <div class="flex flex-col md:flex-row gap-6">
 
-      <div class="w-full mt-6 border-t border-white/20 pt-4">
-        <div class="flex justify-between items-center">
-          <span class="text-blue-600 dark:text-sky-400">Contact me:</span>
-          <a href="mailto:darkmindcoder@gmail.com" class="bg-purple-600 hover:bg-purple-700 transition px-3 py-2 rounded text-sm">Email</a>
+            <!-- LEVÁ KARTA -->
+            <div class="glass rounded-xl shadow-xl p-6 w-full md:w-80 text-white text-center">
+                <img src="https://avatars.githubusercontent.com/u/9441083?v=4&size=500" alt="avatar"
+                    class="w-40 h-40 mx-auto rounded-xl border border-white mb-4" />
+                <h2 class="text-xl font-semibold">EncryptSL</h2>
+                <p id="age" class="text-white/80 text-sm mt-1">...</p>
+                <div class="text-center mt-4">
+                    <a href="https://discordapp.com/users/185744294865272832"
+                        class="bg-indigo-500 hover:bg-indigo-600 transition px-4 py-2 rounded text-sm font-medium">DISCORD</a>
+                </div>
+            </div>
+
+            <!-- PRAVÁ KARTA -->
+            <div class="glass rounded-xl shadow-xl p-6 w-full md:w-[32rem] text-white">
+                <h1 class="text-2xl font-semibold text-center">Hi, I'm EncryptSL</h1>
+                <p class="pt-2 text-center">Website & Minecraft plugin developer.<br />I love Nette, PHP, Kotlin & Java.
+                </p>
+
+                <div class="w-full mt-6 border-t border-white/20 pt-4">
+                    <div class="flex flex-wrap justify-center gap-3 pt-4 text-white text-sm">
+                        <a href="projects.html" class="p-2 bg-blue-600 hover:bg-blue-700 rounded" title="Projects">
+                            <i data-lucide="puzzle" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://github.com/EncryptSL" target="_blank"
+                            class="p-2 bg-gray-800 hover:bg-gray-900 rounded" title="GitHub">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.spigotmc.org/members/rydloscz.127028/" target="_blank"
+                            class="p-2 bg-yellow-600 hover:bg-yellow-700 rounded" title="SpigotMC">
+                            <i data-lucide="server" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://open.spotify.com/playlist/4aKjPgxfkuH6DtGvn27sE8?si=5ec3e5f3eff44d55"
+                            target="_blank" class="p-2 bg-green-500 hover:bg-green-600 rounded" title="Spotify">
+                            <i data-lucide="music" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://ko-fi.com/encryptsl" target="_blank"
+                            class="p-2 bg-pink-500 hover:bg-pink-600 rounded" title="Donate">
+                            <i data-lucide="coffee" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <!-- FOOTER -->
+        <footer class="glass rounded-xl shadow-xl p-4 w-full max-w-[860px] text-center text-sm text-white/80 mt-2">
+            By <a href="#" class="text-yellow-300">EncryptSL</a> © <span id="year"></span>
+        </footer>
     </div>
-    <footer class="text-center text-sm text-white/70 pt-6">
-      By <a href="#" class="text-yellow-300">EncryptSL</a> © <span id="year"></span>
-    </footer>
-  </main>
 
-  <script>
-    const now = new Date();
-    const hours = now.getHours();
-    if (hours > 18 || hours < 5) {
-      document.body.style.backgroundImage = "url(assets/background_night_press.webp)";
-    }
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+        const now = new Date();
+        const hours = now.getHours();
+        if (hours > 18 || hours < 5) {
+            document.body.style.backgroundImage = "url('assets/background_night_press.webp')";
+        }
 
-    function currentAge() {
-      const diff = new Date().getTime() - 923198400000;
-      const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
-      document.getElementById("age").textContent = `- ${years} y/o`;
-      document.getElementById("year").textContent = new Date().getFullYear();
-    }
-    setInterval(currentAge, 1000);
-  </script>
+        function currentAge() {
+            const diff = new Date().getTime() - 923198400000;
+            const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+            document.getElementById("age").textContent = `${years} y/o`;
+            document.getElementById("year").textContent = new Date().getFullYear();
+        }
+        setInterval(currentAge, 1000);
+    </script>
 </body>
 
 </html>
