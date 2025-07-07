@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
+    <style type="text/css">
         body {
             font-family: 'Inter', sans-serif;
             background: url('assets/background.webp') no-repeat center center fixed;
@@ -22,17 +22,24 @@
             background-color: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+
+        .bg-slate-800\/60:hover {
+            box-shadow: 0 0 15px 3px rgba(14, 165, 233, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            will-change: transform, box-shadow;
+        }
     </style>
 </head>
 
-<body class="bg-cover bg-center" style="background-image: url('assets/background.webp')">
+<body class="bg-[#001f3f] bg-cover bg-center flex items-center justify-center font-mono">
     <div class="flex flex-col items-center justify-center min-h-screen px-4 py-10 gap-6">
 
         <!-- OBSAH (2 karty vedle sebe) -->
         <div class="flex flex-col md:flex-row gap-6">
 
             <!-- LEVÁ KARTA -->
-            <div class="glass rounded-xl shadow-xl p-6 w-full md:w-80 text-white text-center">
+            <div
+                class="glass bg-slate-800/60 rounded-xl shadow-lg text-white p-6 w-full md:w-80 text-center border border-transparent hover:border-blue-500 transition duration-200">
                 <img src="https://avatars.githubusercontent.com/u/9441083?v=4&size=500" alt="avatar"
                     class="w-40 h-40 mx-auto rounded-xl border border-white mb-4" />
                 <h2 class="text-xl font-semibold">EncryptSL</h2>
@@ -44,9 +51,20 @@
             </div>
 
             <!-- PRAVÁ KARTA -->
-            <div class="glass rounded-xl shadow-xl p-6 w-full md:w-[32rem] text-white">
+            <div
+                class="glass bg-slate-800/60 rounded-xl shadow-lg p-6 w-full md:w-[32rem] text-white text-center border border-transparent hover:border-blue-500 transition duration-200">
                 <h1 class="text-2xl font-semibold text-center">Hi, I'm EncryptSL</h1>
-                <p class="pt-2 text-center">Website & Minecraft plugin developer.<br />I love Nette, PHP, Kotlin & Java.
+                <p class="pt-2 text-center">
+                    I'm a passionate developer of Minecraft plugins and PHP websites, primarily focusing on the <span
+                        class="bg-blue-200 text-black px-1 rounded-sm">Nette Framework</span>, <span
+                        class="bg-yellow-200 text-black px-1 rounded-sm">Java</span>, and <span
+                        class="bg-purple-200 text-black px-1 rounded-sm">Kotlin</span>.<br>
+                    My main programming languages are <span class="bg-blue-200 text-black px-1 rounded-sm">PHP</span>,
+                    <span class="bg-yellow-200 text-black px-1 rounded-sm">Java</span>, and <span
+                        class="bg-purple-200 text-black px-1 rounded-sm">Kotlin</span>.<br>
+                    I also sometimes focus on <span class="bg-green-200 text-black px-1 rounded-sm">Python</span>, using
+                    it to write simple bots that help make my life with Discord easier.<br>
+                    I enjoy sharing my creations as open-source on GitHub.
                 </p>
 
                 <div class="w-full mt-6 border-t border-white/20 pt-4">
@@ -76,7 +94,8 @@
         </div>
 
         <!-- FOOTER -->
-        <footer class="glass rounded-xl shadow-xl p-4 w-full max-w-[860px] text-center text-sm text-white/80 mt-2">
+        <footer
+            class="glass rounded-xl shadow-lg text-white/80 text-center text-sm p-4 w-full max-w-5xl mx-auto">
             By <a href="#" class="text-yellow-300">EncryptSL</a> © <span id="year"></span>
         </footer>
     </div>
