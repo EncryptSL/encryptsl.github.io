@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { age, year } from "$lib/age";
     import { PuzzleIcon } from "@lucide/svelte";
 </script>
@@ -123,7 +124,7 @@
                             class="relative group inline-flex justify-center items-center"
                         >
                             <a
-                                href="/projects"
+                                href="{base}/projects"
                                 class="rounded bg-blue-600 p-2 hover:bg-blue-700 cursor-pointer flex justify-center items-center"
                             >
                                 <PuzzleIcon class="h-5 w-5 text-white" />

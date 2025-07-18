@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { year } from "$lib/age";
 </script>
 
@@ -73,7 +74,7 @@
             <!-- LINKS -->
             <div class="flex flex-wrap justify-center gap-4 mt-8">
                 <a
-                    href="/"
+                    href="{base}/"
                     class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm transition
             flex items-center justify-center gap-2"
                 >
