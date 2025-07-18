@@ -31,7 +31,6 @@
         <div class="space-y-4">
             <a
                 href="{base}/"
-                target="_blank"
                 class="block bg-green-700 hover:bg-green-800 active:bg-gray-900
                        transition duration-200 py-3 rounded-lg text-white font-semibold text-lg
                        shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-75"
