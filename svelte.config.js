@@ -18,9 +18,14 @@ const config = {
 			precompress: false,
 			strict: true
 		}),
-		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
-		}
+        paths: {
+            // Zde je klíčová změna:
+            // Předpokládejme, že vaše aplikace je dostupná na https://encryptsl.github.io/
+            // V takovém případě by base měla být buď '' nebo '/'
+            base: process.argv.includes('dev') ? '' : '/',
+            // nebo pro GitHub Pages URL s názvem repozitáře, např. 'https://encryptsl.github.io/my-repo/'
+            // base: process.argv.includes('dev') ? '' : '/my-repo',
+        },
 	},
 }
 
