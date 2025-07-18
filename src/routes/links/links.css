@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: url('assets/linktree.webp') no-repeat center center fixed!important;
+    background-size: cover;
+}
+
+.glass {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Toto pravidlo z vašeho CSS pro hover efekt. Aplikujeme ho na hlavní Linktree kartu. */
+.linktree-card:hover {
+    box-shadow: 0 0 15px 3px rgba(14, 233, 98, 0.6);
+    transform: scale(1.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
+}
