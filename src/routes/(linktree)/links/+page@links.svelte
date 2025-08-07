@@ -37,6 +37,15 @@
       </a>
 
       <a
+        href="https://kick.com/encryptsl"
+        class="block bg-green-700 hover:bg-green-800 active:bg-gray-900
+                       transition duration-200 py-3 rounded-lg text-white font-semibold text-lg
+                       shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-75"
+      >
+        KICK.COM/ENCRYPTSL
+      </a>
+
+      <a
         href="https://discordapp.com/users/185744294865272832"
         target="_blank"
         class="block bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800
