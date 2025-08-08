@@ -1,0 +1,33 @@
+links:
+  - title: Kick
+    link: https://kick.com/encryptsl
+    icon: fa-brands fa-kickstarter-k
+    background: "bg-green-400 hover:bg-green-500 active:bg-green-600"
+  - title: Twitch
+    link: https://twitch.tv/encryptsl
+    icon: fa-brands fa-twitch
+    background: "bg-purple-500 hover:bg-purple-600 active:bg-purple-700"
+  - title: YouTube
+    link: https://www.youtube.com/@encryptsl
+    icon: fa-brands fa-youtube
+    background: "bg-red-500 hover:bg-red-600 active:bg-red-700"
+  - title: Discord
+    link: https://discordapp.com/users/185744294865272832
+    icon: fa-brands fa-discord
+    background: "bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800"
+  - title: GitHub
+    link: https://github.com/encryptsl
+    icon: fa-brands fa-github
+    background: "bg-gray-800 hover:bg-gray-700 active:bg-gray-800"
+  - title: SpigotMC
+    link: https://www.spigotmc.org/members/rydloscz.127028/
+    icon: fa-solid fa-link
+    background: "bg-yellow-600 hover:bg-yellow-700 active:bg-yellow-800"
+  - title: "MY SPOTIFY PLAYLIST"
+    link: https://open.spotify.com/playlist/56NngZ2QAyFvHvm3fuXr7J?si=671035f6c14645a9
+    icon: fa-brands fa-spotify
+    background: "bg-green-500 hover:bg-green-600 active:bg-green-700"
+  - title: "SUPPORT ME ON KO-FI!"
+    link: https://ko-fi.com/encryptsl
+    icon: fa-solid fa-circle-dollar-to-slot
+    background: "bg-pink-500 hover:bg-pink-600 active:bg-pink-700"

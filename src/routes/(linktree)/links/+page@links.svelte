@@ -1,6 +1,7 @@
 <script>
   import { base } from "$app/paths";
   import { year } from "$lib/age";
+  import linksData from "$lib/data/social.yml";
 </script>
 
 <svelte:head>
@@ -27,81 +28,25 @@
     </p>
 
     <div class="space-y-4">
+      {#each linksData.links as link}
+      <a
+        href="{link.link}"
+        target="_blank"
+        class="block {link.background}
+                       transition duration-200 py-3 rounded-lg text-white font-semibold text-lg
+                       shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-75"
+      >
+        <i class="{link.icon}"></i> {link.title.toUpperCase()}
+      </a>
+      {/each}
       <a
         href="{base}/"
+        target="_blank"
         class="block bg-green-700 hover:bg-green-800 active:bg-gray-900
                        transition duration-200 py-3 rounded-lg text-white font-semibold text-lg
                        shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-75"
       >
-        HOME
-      </a>
-
-      <a
-        href="https://kick.com/encryptsl"
-        class="block bg-green-700 hover:bg-green-800 active:bg-gray-900
-                       transition duration-200 py-3 rounded-lg text-white font-semibold text-lg
-                       shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-75"
-      >
-        KICK.COM/ENCRYPTSL
-      </a>
-
-      <a
-        href="https://discordapp.com/users/185744294865272832"
-        target="_blank"
-        class="block bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800
-                       transition duration-200 py-3 rounded-lg text-white font-semibold text-lg
-                       shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75"
-      >
-        DISCORD
-      </a>
-
-      <a
-        href="https://github.com/EncryptSL"
-        target="_blank"
-        class="block bg-gray-700 hover:bg-gray-800 active:bg-gray-900
-                       transition duration-200 py-3 rounded-lg text-white font-semibold text-lg
-                       shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-75"
-      >
-        GITHUB
-      </a>
-
-      <a
-        href="https://www.spigotmc.org/members/rydloscz.127028/"
-        target="_blank"
-        class="block bg-yellow-600 hover:bg-yellow-700 active:bg-yellow-800
-                       transition duration-200 py-3 rounded-lg text-white font-semibold text-lg
-                       shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-75"
-      >
-        SPIGOTMC PROFILE
-      </a>
-
-      <a
-        href="https://open.spotify.com/playlist/56NngZ2QAyFvHvm3fuXr7J?si=671035f6c14645a9"
-        target="_blank"
-        class="block bg-green-500 hover:bg-green-600 active:bg-green-700
-                       transition duration-200 py-3 rounded-lg text-white font-semibold text-lg
-                       shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
-      >
-        MY SPOTIFY PLAYLIST
-      </a>
-
-      <a
-        href="https://ko-fi.com/encryptsl"
-        target="_blank"
-        class="block bg-pink-500 hover:bg-pink-600 active:bg-pink-700
-                       transition duration-200 py-3 rounded-lg text-white font-semibold text-lg
-                       shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-75"
-      >
-        SUPPORT ME ON KO-FI!
-      </a>
-
-      <a
-        href="projects.html"
-        class="block bg-blue-600 hover:bg-blue-700 active:bg-blue-800
-                       transition duration-200 py-3 rounded-lg text-white font-semibold text-lg
-                       shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75"
-      >
-        MY PROJECTS
+        <i class="fab fa-readme"></i> VISIT HOMEPAGE
       </a>
     </div>
 

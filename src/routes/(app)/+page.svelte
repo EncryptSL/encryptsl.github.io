@@ -329,7 +329,7 @@
     </div>
 
     <footer
-      class="glass rounded-xl shadow-lg text-white/80 text-center text-sm p-4 w-full max-w-5xl mx-auto"
+      class="glass bg-slate-800/60 rounded-xl shadow-lg text-white/80 text-center text-sm p-4 w-full max-w-5xl mx-auto"
     >
       By <a href="#" class="text-yellow-300">EncryptSL</a> ©
       <span id="year">{$year}</span>
