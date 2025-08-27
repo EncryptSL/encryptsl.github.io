@@ -5,6 +5,10 @@ body {
   font-family: "Inter", sans-serif !important;
 }
 
+body.clean-background {
+  background: rgb(36 43 53);
+}
+
 body.day-background {
   background: url("@assets/background.webp") no-repeat center center fixed;
   background-size: cover;

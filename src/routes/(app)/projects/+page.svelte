@@ -4,65 +4,66 @@
 </script>
 
 <container class="flex items-center justify-center">
-  <!-- WRAPPER -->
+  <!-- WRAPPER (šířka zachována) -->
   <div
     class="w-full max-w-3xl space-y-6 min-h-screen flex flex-col items-center justify-center px-4 bg-cover bg-no-repeat text-white"
   >
-    <!-- PROJECTS CARD -->
+    <!-- JEDEN VELKÝ ELEMENT (obsah + odkazy + footer) -->
     <main
-      class="glass bg-slate-800/60 rounded-xl shadow-lg p-8 w-full border border-none hover:border-blue-500 transition duration-200"
+      class="glass bg-slate-800/60 rounded-xl shadow-lg p-8 w-full border border-transparent hover:border-blue-500 transition duration-200"
     >
       <h1 class="text-3xl font-bold text-center mb-8">My Projects</h1>
-
-      <div class="grid sm:grid-cols-2 gap-6 text-sm">
-        <div class="transition transform hover:scale-105">
-          <a
-            href="https://github.com/encryptsl/echelon"
-            target="_blank"
-            class="font-semibold underline text-sky-400">Echelon</a
-          >
-          <p>Kotlin Private Discord Bot</p>
-        </div>
-        <div class="transition transform hover:scale-105">
-          <a
-            href="{base}/"
-            target="_blank"
-            class="font-semibold underline text-sky-400">ZenBeat</a
-          >
-          <p>Kotlin Private Discord Music Bot</p>
-        </div>
-        <div class="transition transform hover:scale-105">
-          <a
-            href="https://github.com/encryptsl/liteeco"
-            target="_blank"
-            class="font-semibold underline text-sky-400">LiteEco</a
-          >
-          <p>Paper Economy Plugin with Vault support</p>
-        </div>
-        <div class="transition transform hover:scale-105">
-          <a
-            href="https://panda.cekuj.net/"
-            target="_blank"
-            class="font-semibold underline text-sky-400">PandaProject</a
-          >
-          <p>Nette app with REST API for image fetching</p>
-        </div>
-        <div class="transition transform hover:scale-105">
-          <a
-            href="https://www.spigotmc.org/resources/censor-reloaded-advanced-chat-filter.14752"
-            target="_blank"
-            class="font-semibold underline text-sky-400">CensorReloaded</a
-          >
-          <p>Java Bukkit Chat Plugin</p>
-        </div>
-        <div class="transition transform hover:scale-105">
-          <a
-            href="https://www.youtube.com/shorts/062Igi5guz0"
-            target="_blank"
-            class="font-semibold underline text-sky-400"
-            >GameMax Revolt Showcase</a
-          >
-          <p>My current PC case</p>
+      <div class="bg-white/5 rounded-xl shadow-lg p-6 w-full">
+        <div class="grid sm:grid-cols-2 gap-6 text-sm">
+          <div class="transition transform hover:scale-105">
+            <a
+              href="https://github.com/encryptsl/echelon"
+              target="_blank"
+              class="font-semibold underline text-sky-400">Echelon</a
+            >
+            <p>Kotlin Private Discord Bot</p>
+          </div>
+          <div class="transition transform hover:scale-105">
+            <a
+              href="{base}/"
+              target="_blank"
+              class="font-semibold underline text-sky-400">ZenBeat</a
+            >
+            <p>Kotlin Private Discord Music Bot</p>
+          </div>
+          <div class="transition transform hover:scale-105">
+            <a
+              href="https://github.com/encryptsl/liteeco"
+              target="_blank"
+              class="font-semibold underline text-sky-400">LiteEco</a
+            >
+            <p>Paper Economy Plugin with Vault support</p>
+          </div>
+          <div class="transition transform hover:scale-105">
+            <a
+              href="https://panda.cekuj.net/"
+              target="_blank"
+              class="font-semibold underline text-sky-400">PandaProject</a
+            >
+            <p>Nette app with REST API for image fetching</p>
+          </div>
+          <div class="transition transform hover:scale-105">
+            <a
+              href="https://www.spigotmc.org/resources/censor-reloaded-advanced-chat-filter.14752"
+              target="_blank"
+              class="font-semibold underline text-sky-400">CensorReloaded</a
+            >
+            <p>Java Bukkit Chat Plugin</p>
+          </div>
+          <div class="transition transform hover:scale-105">
+            <a
+              href="https://www.youtube.com/shorts/062Igi5guz0"
+              target="_blank"
+              class="font-semibold underline text-sky-400"
+              >GameMax Revolt Showcase</a
+            >
+            <p>My current PC case</p>
+          </div>
         </div>
       </div>
 
@@ -148,14 +149,14 @@
           BUY KOFI
         </a>
       </div>
-    </main>
 
-    <!-- FOOTER (ODDĚLENÝ) -->
-    <footer
-      class="glass bg-slate-800/60 rounded-xl shadow-lg text-white/80 text-center text-sm p-4 w-full max-w-5xl mx-auto"
-    >
-      By <a href="{base}/" class="text-yellow-300">EncryptSL</a> ©
-      <span id="year">{$year}</span>
-    </footer>
+      <!-- FOOTER (uvnitř stejného elementu) -->
+      <footer
+        class="bg-white/5 rounded-xl shadow-lg text-white/80 text-center text-sm p-4 w-full mt-10"
+      >
+        By <a href="{base}/" class="text-yellow-300">EncryptSL</a> ©
+        <span id="year">{$year}</span>
+      </footer>
+    </main>
   </div>
 </container>

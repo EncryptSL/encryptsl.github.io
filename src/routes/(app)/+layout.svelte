@@ -12,17 +12,19 @@
   onMount(() => {
     const now = new Date();
     const hours = now.getHours();
+    /**
     if (hours > 18 || hours < 5) {
       document.body.classList.add("night-background");
     } else {
       document.body.classList.add("day-background");
-    }
+    }**/
 
     updateAge();
     const interval = setInterval(updateAge, 1000);
+    document.body.classList.add("clean-background");
     return () => {
       clearInterval(interval);
-      document.body.classList.remove("night-background");
+      ///document.body.classList.remove("night-background");
     };
   });
 </script>
