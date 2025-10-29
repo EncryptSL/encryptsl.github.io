@@ -1,0 +1,24 @@
+projects:
+  - name: Echelon
+    url: https://github.com/encryptsl/echelon
+    description: Kotlin Private Discord Bot
+
+  - name: ZenBeat
+    url: "https://github.com/encryptsl/zenbeat"
+    description: Kotlin Private Discord Music Bot
+
+  - name: LiteEco
+    url: https://github.com/encryptsl/liteeco
+    description: Paper Economy Plugin with Multi currency support
+
+  - name: PandaProject
+    url: https://panda.cekuj.net/
+    description: Nette app with REST API for image fetching
+
+  - name: CensorReloaded
+    url: https://www.spigotmc.org/resources/censor-reloaded-advanced-chat-filter.14752
+    description: Java Bukkit Chat Plugin
+
+  - name: GameMax Revolt Showcase
+    url: https://www.youtube.com/shorts/062Igi5guz0
+    description: My current PC case

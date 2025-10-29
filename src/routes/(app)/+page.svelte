@@ -3,6 +3,46 @@
   import { age, year } from "$lib/age";
   import { SquareLibrary } from "@lucide/svelte";
   import menu from "$lib/data/menu.yml";
+
+  const stack = [
+    {
+      title: "🧠 PC Build",
+      items: [
+        "Ryzen 5 5600 - 4.4 GHz",
+        "Radeon RX 6600 8GB",
+        "32GB DDR4 RAM",
+        "MSI B450 Tomahawk Max",
+      ],
+    },
+    {
+      title: "💽 Components",
+      items: [
+        "CZC.Gaming Reaper Keyboard",
+        "Bloody Sport Series Mouse",
+        '23.8" MSI PRO MP243XW',
+      ],
+    },
+    {
+      title: "🛠️ Software",
+      items: ["DaVinci Resolve", "IntelliJ IDEA", "VSCode", "FileZilla"],
+    },
+    {
+      title: "🖥️ OS",
+      items: ["Windows 11 Pro", "Linux - Ubuntu Server"],
+    },
+    {
+      title: "💻 Languages",
+      items: [
+        "PHP",
+        "Java",
+        "Kotlin",
+        "Python",
+        "JavaScript",
+        "SQL",
+        "CSS (reluctantly 😄)",
+      ],
+    },
+  ];
 </script>
 
 <container class="flex items-center justify-center font-mono">
@@ -13,6 +53,42 @@
     <div
       class="glass bg-slate-800/60 rounded-2xl shadow-2xl p-8 w-full text-white border border-transparent hover:border-blue-500 transition duration-200 flex flex-col gap-8"
     >
+      <div class="w-full border-b border-indigo-500">
+        <div class="flex flex-wrap justify-end gap-3 text-sm text-white mb-5">
+          <div class="relative group inline-flex justify-center items-center">
+            <a
+              href="{base}/projects"
+              class="rounded bg-blue-500 p-1 hover:bg-blue-600 cursor-pointer flex justify-center items-center"
+              aria-label="prjects"
+            >
+              <span><i class="fa-solid fa-folder"></i> Projects</span>
+            </a>
+          </div>
+
+          <div class="relative group inline-flex justify-center items-center">
+            <a
+              href="{base}/links"
+              class="rounded bg-green-500 p-1 hover:bg-green-600 cursor-pointer flex justify-center items-center"
+              aria-label="links"
+            >
+              <span><i class="fa-brands fa-linktree"></i> Linktree</span>
+            </a>
+          </div>
+
+          {#each menu.links as link}
+            <div class="relative group inline-flex justify-center items-center">
+              <a
+                href={link.link}
+                target="_blank"
+                class="rounded {link.background} p-1 cursor-pointer flex justify-center items-center"
+                aria-label={link.link}
+              >
+                <span><i class={link.icon}></i> {link.title}</span>
+              </a>
+            </div>
+          {/each}
+        </div>
+      </div>
       <!-- SEKCE: 2 karty vedle sebe -->
       <div class="flex flex-col md:flex-row gap-6 w-full">
         <!-- LEVÁ KARTA -->
@@ -39,27 +115,46 @@
         <!-- PRAVÁ KARTA -->
         <div class="bg-white/5 rounded-xl shadow-lg p-6 w-full">
           <h1 class="text-2xl font-semibold text-center">Hi, I'm EncryptSL</h1>
-          <p class="pt-2 text-center">
-            I'm a passionate developer of Minecraft plugins and PHP websites,
-            primarily focusing on the <span
-              class="bg-blue-200 text-black px-1 rounded-sm"
-              >Nette Framework</span
-            >,
-            <span class="bg-yellow-200 text-black px-1 rounded-sm">Java</span>,
+          <p class="text-gray-300 leading-relaxed text-center">
+            I'm a <strong
+              class="text-blue-400 dark:text-blue-300 font-extrabold"
+              >Software Developer</strong
+            >
+            focused on
+            <strong class="text-gray-200 dark:text-gray-50"
+              >robust back-end systems</strong
+            >
+            using
+            <strong class="text-yellow-400 dark:text-yellow-300 font-extrabold"
+              >Kotlin</strong
+            >
             and
-            <span class="bg-purple-200 text-black px-1 rounded-sm">Kotlin</span
-            >.<br />
-            My main programming languages are
-            <span class="bg-blue-200 text-black px-1 rounded-sm">PHP</span>,
-            <span class="bg-yellow-200 text-black px-1 rounded-sm">Java</span>,
+            <strong class="text-yellow-400 dark:text-yellow-300 font-extrabold"
+              >PHP</strong
+            >. While I work in an industrial setting, my passion lies in
+            developing
+            <strong class="text-purple-400 dark:text-purple-300 font-extrabold"
+              >large-scale Open Source projects</strong
+            >
+            like
+            <strong class="text-green-400 dark:text-green-300 font-extrabold"
+              >LiteEco</strong
+            >. I love building
+            <strong class="text-blue-400 dark:text-blue-300"
+              >new programs and plugins</strong
+            >
+            from scratch, constantly seeking ways to
+            <strong class="text-pink-400 dark:text-pink-300 font-extrabold"
+              >optimize performance</strong
+            >
             and
-            <span class="bg-purple-200 text-black px-1 rounded-sm">Kotlin</span
-            >.<br />
-            I also sometimes focus on
-            <span class="bg-green-200 text-black px-1 rounded-sm">Python</span>,
-            using it to write simple bots that help make my life with Discord
-            easier.<br />
-            I enjoy sharing my creations as open-source on GitHub.
+            <strong class="text-pink-400 dark:text-pink-300 font-extrabold"
+              >improve existing codebases</strong
+            >. If you're looking for a more in-depth view of my contributions,
+            especially within the
+            <strong class="text-gray-200 dark:text-gray-50"
+              >developer community</strong
+            >, check out my projects below!
           </p>
 
           <!-- Jazyky -->
@@ -82,148 +177,33 @@
           </div>
 
           <!-- Ikonky -->
-          <div class="mt-4 w-full border-t border-white/20 pt-4">
-            <div
-              class="flex flex-wrap justify-center gap-3 pt-4 text-sm text-white"
-            >
-              <!-- ZDE nechávám původní ikonky (Projects, Linktree, GitHub, SpigotMC, Spotify, Ko-Fi) -->
-
-              <div
-                class="relative group inline-flex justify-center items-center"
-              >
-                <a
-                  href="{base}/projects"
-                  class="rounded bg-blue-500 p-3 hover:bg-blue-600 cursor-pointer flex justify-center items-center"
-                >
-                  <i class="fa-solid fa-folder"></i>
-                </a>
-                <div
-                  class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2
-          px-3 py-1 bg-gray-800 text-white text-sm rounded-md shadow-lg
-          opacity-0 invisible group-hover:opacity-100 group-hover:visible
-          transition-opacity duration-300 whitespace-nowrap z-10"
-                >
-                  PROJECTS
-                </div>
-              </div>
-
-              <div
-                class="relative group inline-flex justify-center items-center"
-              >
-                <a
-                  href="{base}/links"
-                  class="rounded bg-green-500 p-3 hover:bg-green-600 cursor-pointer flex justify-center items-center"
-                >
-                  <i class="fa-brands fa-linktree"></i>
-                </a>
-                <div
-                  class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2
-          px-3 py-1 bg-gray-800 text-white text-sm rounded-md shadow-lg
-          opacity-0 invisible group-hover:opacity-100 group-hover:visible
-          transition-opacity duration-300 whitespace-nowrap z-10"
-                >
-                  LINKTREE
-                </div>
-              </div>
-
-              {#each menu.links as link}
-                <div
-                  class="relative group inline-flex justify-center items-center"
-                >
-                  <a
-                    href={link.link}
-                    target="_blank"
-                    class="rounded {link.background} p-3 cursor-pointer flex justify-center items-center"
-                  >
-                    <i class={link.icon}></i>
-                  </a>
-                  <div
-                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2
-          px-3 py-1 bg-gray-800 text-white text-sm rounded-md shadow-lg
-          opacity-0 invisible group-hover:opacity-100 group-hover:visible
-          transition-opacity duration-300 whitespace-nowrap z-10"
-                  >
-                    {link.title}
-                  </div>
-                </div>
-              {/each}
-            </div>
-          </div>
         </div>
       </div>
 
-      <!-- SEKCE: Třetí karta (Setup a Stack) -->
       <div class="bg-white/5 rounded-xl shadow-lg p-6 w-full">
         <h2 class="text-2xl font-bold mb-4 text-center">
           Current Setup and Stack
         </h2>
         <div class="columns-1 sm:columns-2 gap-4 w-full">
-          <!-- PC build -->
-          <div class="bg-white/10 p-4 rounded-lg break-inside-avoid mb-4">
-            <h3 class="text-sky-400 font-semibold mb-2">🧠 PC Build</h3>
-            <ul class="list-disc ml-5 space-y-1">
-              <li>Ryzen 5 5600 - 4.4 MHz</li>
-              <li>XFX Radeon RX 6600 Speedster SWIFT210 CORE 8GB</li>
-              <li>32GB DDR4 RAM</li>
-              <li>MSI B450 Tomahawk Max</li>
-            </ul>
-          </div>
-
-          <!-- Software / další bloky zůstávají... -->
-          <div class="bg-white/10 p-4 rounded-lg break-inside-avoid mb-4">
-            <h3 class="text-sky-400 font-semibold mb-2">💽 Other components</h3>
-            <ul class="list-disc ml-5 space-y-1">
-              <li>CZC.Gaming Reaper Keyboard</li>
-              <li>Bloody Sport Series... Mouse</li>
-              <li>23,8" MSI PRO MP243XW</li>
-            </ul>
-          </div>
-          <div class="bg-white/10 p-4 rounded-lg break-inside-avoid mb-4">
-            <h3 class="text-sky-400 font-semibold mb-2">🛠️ Software</h3>
-            <ul class="list-disc ml-5 space-y-1">
-              <li>DaVinci Resolve</li>
-              <li>IntelliJ IDEA Community Edition</li>
-              <li>VSCode</li>
-              <li>FileZilla</li>
-            </ul>
-          </div>
-          <div class="bg-white/10 p-4 rounded-lg break-inside-avoid mb-4">
-            <h3 class="text-sky-400 font-semibold mb-2">🛠️ OS</h3>
-            <ul class="list-disc ml-5 space-y-1">
-              <li>Windows 11 Pro</li>
-              <li>Linux - Ubuntu Server</li>
-            </ul>
-          </div>
-          <div class="bg-white/10 p-4 rounded-lg break-inside-avoid mb-4">
-            <h3 class="text-sky-400 font-semibold mb-2">
-              🛠️ Programming Languages
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-200 text-black px-1 rounded-sm">PHP</span>
-              <span class="bg-yellow-200 text-black px-1 rounded-sm">Java</span>
-              <span class="bg-purple-200 text-black px-1 rounded-sm"
-                >Kotlin</span
-              >
-              <span class="bg-green-200 text-black px-1 rounded-sm">Python</span
-              >
-              <span class="bg-red-200 text-black px-1 rounded-sm"
-                >JavaScript</span
-              >
-              <span class="bg-gray-200 text-black px-1 rounded-sm">SQL</span>
-              <span class="bg-indigo-200 text-black px-1 rounded-sm"
-                >I hate CSS xD</span
-              >
+          {#each stack as category}
+            <div class="bg-white/10 p-4 rounded-lg break-inside-avoid mb-4">
+              <h3 class="text-sky-400 font-semibold mb-2">{category.title}</h3>
+              <ul class="list-disc ml-5 space-y-1">
+                {#each category.items as item}
+                  <li>{item}</li>
+                {/each}
+              </ul>
             </div>
-          </div>
+          {/each}
         </div>
       </div>
 
-      <!-- FOOTER uvnitř wrapperu -->
       <footer
         class="bg-white/5 rounded-xl shadow-lg text-white/80 text-center text-sm p-4 w-full"
       >
-        By <a href="{base}/" class="text-yellow-300">EncryptSL</a> ©
-        <span id="year">{$year}</span>
+        © <span id="year">{$year}</span>
+        <a href="{base}/" class="text-yellow-300">EncryptSL</a> • Built with ❤️ using
+        SvelteKit & TailwindCSS
       </footer>
     </div>
   </div>

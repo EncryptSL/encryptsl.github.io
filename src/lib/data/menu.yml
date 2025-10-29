@@ -1,17 +1,10 @@
 links:
   - title: GitHub
-    link: https://github.com/encryptsl
+    link: https://github.com/EncryptSL
     icon: fa-brands fa-github
-    background: "bg-gray-800 hover:bg-gray-700"
-  - title: SpigotMC
-    link: https://www.spigotmc.org/members/rydloscz.127028/
-    icon: fa-solid fa-link
-    background: "bg-yellow-600 hover:bg-yellow-700"
-  - title: "MY SPOTIFY PLAYLIST"
-    link: https://open.spotify.com/playlist/56NngZ2QAyFvHvm3fuXr7J?si=671035f6c14645a9
-    icon: fa-brands fa-spotify
-    background: "bg-green-500 hover:bg-green-600"
-  - title: "SUPPORT ME ON KO-FI!"
+    background: "bg-gray-700 hover:bg-gray-800"
+
+  - title: Donate
     link: https://ko-fi.com/encryptsl
-    icon: fa-solid fa-circle-dollar-to-slot
-    background: "bg-pink-500 hover:bg-pink-600"
+    icon: fa-solid fa-mug-hot
+    background: "bg-pink-600 hover:bg-pink-700"
