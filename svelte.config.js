@@ -26,6 +26,9 @@ const config = {
             // nebo pro GitHub Pages URL s názvem repozitáře, např. 'https://encryptsl.github.io/my-repo/'
             // base: process.argv.includes('dev') ? '' : '/my-repo',
         },
+		prerender: {
+			entries: ['*']
+		}
 	},
 }
 

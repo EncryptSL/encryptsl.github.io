@@ -1,8 +1,5 @@
 <script>
-  import { base } from "$app/paths";
   import { age, year } from "$lib/age";
-  import { SquareLibrary } from "@lucide/svelte";
-  import menu from "$lib/data/menu.yml";
 
   const stack = [
     {
@@ -45,166 +42,104 @@
   ];
 </script>
 
-<container class="flex items-center justify-center font-mono">
-  <div
-    class="flex flex-col items-start justify-start min-h-screen px-4 py-10 gap-6 max-w-[950px] w-full"
-  >
-    <!-- JEDEN VELKÝ WRAPPER -->
-    <div
-      class="glass bg-slate-800/60 rounded-2xl shadow-2xl p-8 w-full text-white border border-transparent hover:border-blue-500 transition duration-200 flex flex-col gap-8"
-    >
-      <div class="w-full border-b border-indigo-500">
-        <div class="flex flex-wrap justify-end gap-3 text-sm text-white mb-5">
-          <div class="relative group inline-flex justify-center items-center">
-            <a
-              href="{base}/projects"
-              class="rounded bg-blue-500 p-1 hover:bg-blue-600 cursor-pointer flex justify-center items-center"
-              aria-label="prjects"
-            >
-              <span><i class="fa-solid fa-folder"></i> Projects</span>
-            </a>
-          </div>
-
-          <div class="relative group inline-flex justify-center items-center">
-            <a
-              href="{base}/links"
-              class="rounded bg-green-500 p-1 hover:bg-green-600 cursor-pointer flex justify-center items-center"
-              aria-label="links"
-            >
-              <span><i class="fa-brands fa-linktree"></i> Linktree</span>
-            </a>
-          </div>
-
-          {#each menu.links as link}
-            <div class="relative group inline-flex justify-center items-center">
-              <a
-                href={link.link}
-                target="_blank"
-                class="rounded {link.background} p-1 cursor-pointer flex justify-center items-center"
-                aria-label={link.link}
-              >
-                <span><i class={link.icon}></i> {link.title}</span>
-              </a>
-            </div>
-          {/each}
-        </div>
-      </div>
-      <!-- SEKCE: 2 karty vedle sebe -->
-      <div class="flex flex-col md:flex-row gap-6 w-full">
-        <!-- LEVÁ KARTA -->
-        <div
-          class="bg-white/5 rounded-xl shadow-lg p-6 w-full md:w-80 text-center"
-        >
-          <img
-            src="https://avatars.githubusercontent.com/u/9441083?v=4&size=500"
-            alt="avatar"
-            class="w-40 h-40 mx-auto rounded-xl border border-white mb-4"
-          />
-          <h2 class="text-xl font-semibold">EncryptSL</h2>
-          <p id="age" class="text-white/80 text-sm mt-1">{$age}</p>
-          <div class="text-center mt-4">
-            <a
-              href="https://discordapp.com/users/185744294865272832"
-              class="flex w-full justify-center bg-indigo-500 hover:bg-indigo-600 transition px-4 py-2 rounded text-sm font-medium text-white"
-            >
-              DISCORD
-            </a>
-          </div>
-        </div>
-
-        <!-- PRAVÁ KARTA -->
-        <div class="bg-white/5 rounded-xl shadow-lg p-6 w-full">
-          <h1 class="text-2xl font-semibold text-center">Hi, I'm EncryptSL</h1>
-          <p class="text-gray-300 leading-relaxed text-center">
-            I'm a <strong
-              class="text-blue-400 dark:text-blue-300 font-extrabold"
-              >Software Developer</strong
-            >
-            focused on
-            <strong class="text-gray-200 dark:text-gray-50"
-              >robust back-end systems</strong
-            >
-            using
-            <strong class="text-yellow-400 dark:text-yellow-300 font-extrabold"
-              >Kotlin</strong
-            >
-            and
-            <strong class="text-yellow-400 dark:text-yellow-300 font-extrabold"
-              >PHP</strong
-            >. While I work in an industrial setting, my passion lies in
-            developing
-            <strong class="text-purple-400 dark:text-purple-300 font-extrabold"
-              >large-scale Open Source projects</strong
-            >
-            like
-            <strong class="text-green-400 dark:text-green-300 font-extrabold"
-              >LiteEco</strong
-            >. I love building
-            <strong class="text-blue-400 dark:text-blue-300"
-              >new programs and plugins</strong
-            >
-            from scratch, constantly seeking ways to
-            <strong class="text-pink-400 dark:text-pink-300 font-extrabold"
-              >optimize performance</strong
-            >
-            and
-            <strong class="text-pink-400 dark:text-pink-300 font-extrabold"
-              >improve existing codebases</strong
-            >. If you're looking for a more in-depth view of my contributions,
-            especially within the
-            <strong class="text-gray-200 dark:text-gray-50"
-              >developer community</strong
-            >, check out my projects below!
-          </p>
-
-          <!-- Jazyky -->
-          <div class="max-w-sm rounded p-3 mx-auto mt-4">
-            <h2 class="text-1xl font-semibold text-center">Spoken Languages</h2>
-            <div class="flex flex-wrap items-center justify-center gap-2">
-              <span
-                class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded"
-                >Czech</span
-              >
-              <span
-                class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded"
-                >English</span
-              >
-              <span
-                class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded"
-                >Russian</span
-              >
-            </div>
-          </div>
-
-          <!-- Ikonky -->
-        </div>
-      </div>
-
-      <div class="bg-white/5 rounded-xl shadow-lg p-6 w-full">
-        <h2 class="text-2xl font-bold mb-4 text-center">
-          Current Setup and Stack
-        </h2>
-        <div class="columns-1 sm:columns-2 gap-4 w-full">
-          {#each stack as category}
-            <div class="bg-white/10 p-4 rounded-lg break-inside-avoid mb-4">
-              <h3 class="text-sky-400 font-semibold mb-2">{category.title}</h3>
-              <ul class="list-disc ml-5 space-y-1">
-                {#each category.items as item}
-                  <li>{item}</li>
-                {/each}
-              </ul>
-            </div>
-          {/each}
-        </div>
-      </div>
-
-      <footer
-        class="bg-white/5 rounded-xl shadow-lg text-white/80 text-center text-sm p-4 w-full"
+<!-- JEDEN VELKÝ WRAPPER -->
+<!-- SEKCE: 2 karty vedle sebe -->
+<div class="flex flex-col md:flex-row gap-6 w-full">
+  <!-- LEVÁ KARTA -->
+  <div class="bg-white/5 rounded-xl shadow-lg p-6 w-full md:w-80 text-center">
+    <img
+      src="https://avatars.githubusercontent.com/u/9441083?v=4&size=500"
+      alt="avatar"
+      class="w-40 h-40 mx-auto rounded-xl border border-white mb-4"
+    />
+    <h2 class="text-xl font-semibold">EncryptSL</h2>
+    <p id="age" class="text-white/80 text-sm mt-1">{$age}</p>
+    <div class="text-center mt-4">
+      <a
+        href="https://discordapp.com/users/185744294865272832"
+        class="flex w-full justify-center bg-indigo-500 hover:bg-indigo-600 transition px-4 py-2 rounded text-sm font-medium text-white"
       >
-        © <span id="year">{$year}</span>
-        <a href="{base}/" class="text-yellow-300">EncryptSL</a> • Built with ❤️ using
-        SvelteKit & TailwindCSS
-      </footer>
+        DISCORD
+      </a>
     </div>
   </div>
-</container>
+
+  <!-- PRAVÁ KARTA -->
+  <div class="bg-white/5 rounded-xl shadow-lg p-6 w-full">
+    <h1 class="text-2xl font-semibold text-center">Hi, I'm EncryptSL</h1>
+    <p class="text-gray-300 leading-relaxed text-center">
+      I'm a <strong class="text-blue-400 dark:text-blue-300 font-extrabold"
+        >Software Developer</strong
+      >
+      focused on
+      <strong class="text-gray-200 dark:text-gray-50"
+        >robust back-end systems</strong
+      >
+      using
+      <strong class="text-yellow-400 dark:text-yellow-300 font-extrabold"
+        >Kotlin</strong
+      >
+      and
+      <strong class="text-yellow-400 dark:text-yellow-300 font-extrabold"
+        >PHP</strong
+      >. While I work in an industrial setting, my passion lies in developing
+      <strong class="text-purple-400 dark:text-purple-300 font-extrabold"
+        >large-scale Open Source projects</strong
+      >
+      like
+      <strong class="text-green-400 dark:text-green-300 font-extrabold"
+        >LiteEco</strong
+      >. I love building
+      <strong class="text-blue-400 dark:text-blue-300"
+        >new programs and plugins</strong
+      >
+      from scratch, constantly seeking ways to
+      <strong class="text-pink-400 dark:text-pink-300 font-extrabold"
+        >optimize performance</strong
+      >
+      and
+      <strong class="text-pink-400 dark:text-pink-300 font-extrabold"
+        >improve existing codebases</strong
+      >. If you're looking for a more in-depth view of my contributions,
+      especially within the
+      <strong class="text-gray-200 dark:text-gray-50"
+        >developer community</strong
+      >, check out my projects below!
+    </p>
+
+    <!-- Jazyky -->
+    <div class="max-w-sm rounded p-3 mx-auto mt-4">
+      <h2 class="text-1xl font-semibold text-center">Spoken Languages</h2>
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <span
+          class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded"
+          >Czech</span
+        >
+        <span
+          class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded"
+          >English</span
+        >
+        <span
+          class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded"
+          >Russian</span
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-white/5 rounded-xl shadow-lg p-6 w-full">
+  <h2 class="text-2xl font-bold mb-4 text-center">Current Setup and Stack</h2>
+  <div class="columns-1 sm:columns-2 gap-4 w-full">
+    {#each stack as category}
+      <div class="bg-white/10 p-4 rounded-lg break-inside-avoid mb-4">
+        <h3 class="text-sky-400 font-semibold mb-2">{category.title}</h3>
+        <ul class="list-disc ml-5 space-y-1">
+          {#each category.items as item}
+            <li>{item}</li>
+          {/each}
+        </ul>
+      </div>
+    {/each}
+  </div>
+</div>

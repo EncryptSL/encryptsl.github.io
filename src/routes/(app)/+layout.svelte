@@ -1,7 +1,11 @@
 <script>
   import "../../app.css";
+  import { base } from "$app/paths";
   import { onMount } from "svelte";
   import { age, year } from "$lib/age";
+
+  import Navbar from "$lib/components/navbar@app.svelte"
+
   function updateAge() {
     const diff = new Date().getTime() - 923198400000;
     const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
@@ -35,4 +39,23 @@
   <meta property="og:title" content="EncryptSL - Developer" />
 </svelte:head>
 
-<slot />
+<container class="flex items-center justify-center font-mono">
+  <div
+    class="flex flex-col items-start justify-start min-h-screen px-4 py-10 gap-6 max-w-[950px] w-full"
+  >
+    <!-- JEDEN VELKÝ WRAPPER -->
+    <div
+      class="glass bg-slate-800/60 rounded-2xl shadow-2xl p-8 w-full text-white border border-transparent hover:border-blue-500 transition duration-200 flex flex-col gap-8"
+    >
+      <Navbar />
+      <slot />
+      <footer
+        class="bg-white/5 rounded-xl shadow-lg text-white/80 text-center text-sm p-4 w-full"
+      >
+        © <span id="year">{$year}</span>
+        <a href="{base}/" class="text-yellow-300">EncryptSL</a> • Built with ❤️ using
+        SvelteKit & TailwindCSS
+      </footer>
+    </div>
+  </div>
+</container>

@@ -1,0 +1,211 @@
+/* === Obecné nastavení === */
+body.abi {
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  background-color: #0f1113;
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #121212;
+  border-bottom: 1px solid #333;
+}
+
+.nav-link {
+  color: #f0c040;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #1a1c1f;
+}
+
+/* === Výpis changelogů === */
+.changelog-list {
+  background-color: #0f1113;
+  color: #e0e0e0;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 1.5em;
+  border-radius: 8px;
+}
+
+.changelog-list h1 {
+  color: #f0c040;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.changelog-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.changelog-list li {
+  background-color: #1a1c1f;
+  border-left: 4px solid #f0c040;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(240, 192, 64, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.changelog-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(240, 192, 64, 0.2);
+}
+
+.changelog-list a {
+  color: #f0c040;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.changelog-list a:hover {
+  text-decoration: underline;
+}
+
+/* === Detail changelogu === */
+.changelog-detail {
+  background-color: #0f1113;
+  color: #e0e0e0;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 1.5em;
+  border-radius: 8px;
+}
+
+.changelog-detail h1 {
+  color: #f0c040;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.markdown h2,
+.markdown h3 {
+  color: #f0c040;
+  margin-top: 1.5rem;
+}
+
+.markdown p {
+  margin-bottom: 1rem;
+}
+
+.markdown ul,
+.markdown ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.markdown li {
+  margin-bottom: 0.5rem;
+}
+
+.markdown strong {
+  color: #ffcc00;
+}
+
+.markdown code {
+  background-color: #1c1e22;
+  color: #00ffcc;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+}
+
+.markdown pre {
+  background-color: #1c1e22;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.changelog-detail a {
+  color: #f0c040;
+  text-decoration: underline;
+}
+
+.changelog-detail a:hover {
+  color: #ffd966;
+}
+
+.changelog-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.changelog-list li {
+  background-color: #1a1c1f;
+  border-left: 4px solid #f0c040;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(240, 192, 64, 0.1);
+}
+
+.changelog-list a {
+  color: #f0c040;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 0.3rem;
+}
+
+.tags {
+  margin-top: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #333;
+  color: #f0c040;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.3rem;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #f0c040;
+  background-color: #1a1c1f; /* tmavé pozadí */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 1px solid #f0c040;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #f0c040; /* zlaté pozadí při hoveru */
+  color: #1a1c1f; /* kontrastní text */
+}
