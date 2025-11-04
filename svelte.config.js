@@ -25,7 +25,7 @@ const changelogFiles = readdirSync(changelogDir)
     const date = filename.replace('.md', '');
     const slug = toSlug(data.title ?? 'untitled');
 
-    return `/abi/changelog/${slug}?id=${date}`;
+    return `/abi/changelog/${slug}/${date}`;
   });
 
 /** @type {import('@sveltejs/kit').Config} */
