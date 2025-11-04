@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { readdirSync } from 'fs';
+import path from 'path';
 
 function toSlug(title) {
   return title
