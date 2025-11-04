@@ -1,5 +1,14 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { readdirSync } from 'fs';
+
+const changelogFiles = readdirSync('src/lib/abi/changelog')
+  .filter((f) => f.endsWith('.md'))
+  .map((f) => {
+    const [date, ...slugParts] = f.replace('.md', '').split('-');
+    const slug = slugParts.join('-');
+    return `/abi/changelog/${slug}/${date}`;
+  });
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -27,7 +36,7 @@ const config = {
             // base: process.argv.includes('dev') ? '' : '/my-repo',
         },
 		prerender: {
-			entries: ['*']
+			entries: ['*', changelogFiles]
 		}
 	},
 }

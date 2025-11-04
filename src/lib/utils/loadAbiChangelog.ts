@@ -13,7 +13,7 @@ export function loadChangelogList() {
     const slug = path.split('/').pop()?.replace('.md', '');
 
     return {
-      slug: data.slug ?? toSlug(data.title ?? slug) + `?id=${slug}`,
+      slug: data.slug ?? toSlug(data.title ?? slug) + `/${slug}`,
       title: data.title ?? slug,
       date: data.date ? new Date(data.date).toISOString() : null,
       tags: Array.isArray(data.tags) ? data.tags : []
