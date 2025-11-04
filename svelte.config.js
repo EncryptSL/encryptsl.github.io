@@ -12,7 +12,9 @@ function toSlug(title) {
     .trim();
 }
 
-const changelogFiles = readdirSync('src/lib/abi/changelog')
+const changelogDir = 'src/lib/abi/changelog';
+
+const changelogFiles = readdirSync(changelogDir)
   .filter((f) => f.endsWith('.md'))
   .map((filename) => {
     const filePath = path.join(changelogDir, filename);
