@@ -2,12 +2,26 @@ import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { readdirSync } from 'fs';
 
+function toSlug(title) {
+  return title
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .trim();
+}
+
 const changelogFiles = readdirSync('src/lib/abi/changelog')
   .filter((f) => f.endsWith('.md'))
-  .map((f) => {
-    const [date, ...slugParts] = f.replace('.md', '').split('-');
-    const slug = slugParts.join('-');
-    return `/abi/changelog/${slug}/${date}`;
+  .map((filename) => {
+    const filePath = path.join(changelogDir, filename);
+    const raw = readFileSync(filePath, 'utf-8');
+    const { data } = matter(raw);
+
+    const date = filename.replace('.md', '');
+    const slug = toSlug(data.title ?? 'untitled');
+
+    return `/abi/changelog/${slug}?id=${date}`;
   });
 
 /** @type {import('@sveltejs/kit').Config} */
