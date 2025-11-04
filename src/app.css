@@ -3,21 +3,11 @@
 
 body {
   font-family: "Inter", sans-serif !important;
+  transition: background 0.4s ease-in-out;
 }
 
 body.clean-background {
   background: rgb(36 43 53);
-}
-
-body.day-background {
-  background: url("@assets/background.webp") no-repeat center center fixed;
-  background-size: cover;
-}
-
-body.night-background {
-  background: url("@assets/background_night_press.webp") no-repeat center center
-    fixed;
-  background-size: cover;
 }
 
 body.linktree-background {

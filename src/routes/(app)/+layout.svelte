@@ -1,36 +1,34 @@
 <script>
   import "../../app.css";
   import { base } from "$app/paths";
-  import { onMount } from "svelte";
+  import { browser } from '$app/environment';
   import { age, year } from "$lib/age";
 
   import Navbar from "$lib/components/navbar@app.svelte"
 
-  function updateAge() {
-    const diff = new Date().getTime() - 923198400000;
-    const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
-    age.set(`${years} y/o`); // Důležité: měníme hodnotu store
-    year.set(new Date().getFullYear());
-  }
+  import { page } from '$app/state';
 
-  onMount(() => {
-    const now = new Date();
-    const hours = now.getHours();
-    /**
-    if (hours > 18 || hours < 5) {
-      document.body.classList.add("night-background");
+  $: if (browser) {
+    const path = page.url.pathname;
+
+    document.body.classList.remove(
+      'abi',
+      'clean-background',
+      'day-background',
+      'night-background',
+      'linktree-background'
+    );
+
+    if (path.startsWith('/abi/changelog')) {
+      document.body.classList.add('abi');
+    } else if (path === '/') {
+      document.body.classList.add('clean-background');
+    } else if (path === '/links') {
+      document.body.classList.add('linktree-background');
     } else {
-      document.body.classList.add("day-background");
-    }**/
-
-    updateAge();
-    const interval = setInterval(updateAge, 1000);
-    document.body.classList.add("clean-background");
-    return () => {
-      clearInterval(interval);
-      ///document.body.classList.remove("night-background");
-    };
-  });
+      document.body.classList.add('clean-background');
+    }
+  }
 </script>
 
 <svelte:head>
