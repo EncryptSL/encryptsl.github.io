@@ -11,6 +11,7 @@
 		"strict": true,
 		"moduleResolution": "bundler",
 		"types": [
+			"svelte",
 			"node",
       		"@modyfi/vite-plugin-yaml/modules"
 		]

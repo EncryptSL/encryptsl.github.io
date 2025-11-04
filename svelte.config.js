@@ -36,7 +36,7 @@ const config = {
             // base: process.argv.includes('dev') ? '' : '/my-repo',
         },
 		prerender: {
-			entries: ['*', changelogFiles]
+			entries: ['*', ...changelogFiles]
 		}
 	},
 }
