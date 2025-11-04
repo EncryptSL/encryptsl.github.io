@@ -1,5 +1,6 @@
 <script>
   import { age, year } from "$lib/age";
+  import Seo from "$lib/components/Seo.svelte";
 
   const stack = [
     {
@@ -42,10 +43,12 @@
   ];
 </script>
 
-<svelte:head>
-	<title>EncryptSL - Developer</title>
-	<meta name="description" content="I'm a Software Developer focused on robust back-end systems using Kotlin and PHP." />
-</svelte:head>
+<Seo
+  title="EncryptSL - Developer"
+  description="I'm a Software Developer focused on robust back-end systems using Kotlin and PHP."
+  image="https://avatars.githubusercontent.com/u/9441083?v=4&size=500"
+  url="https://encryptsl.github.io/"
+/>
 
 <!-- JEDEN VELKÝ WRAPPER -->
 <!-- SEKCE: 2 karty vedle sebe -->

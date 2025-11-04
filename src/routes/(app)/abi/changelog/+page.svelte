@@ -1,12 +1,16 @@
 <script lang="ts">
   import { base } from "$app/paths";
+  import Seo from "$lib/components/Seo.svelte";
   import { formatDate } from "$lib/utils/date.js";
   export let data;
 </script>
 
-<svelte:head>
-  	<title>EncryptSL - ABI changelog</title>
-</svelte:head>
+<Seo
+  title="EncryptSL - ABI changelog"
+  description="ArenaBreakoutInfinite unofficial changelog cz/sk"
+  image="https://i.imgur.com/wWKKMoJ.jpeg"
+  url="https://encryptsl.github.io/abi/changelog"
+/>
 
 <div class="flex flex-col gap-8 w-full">
   <h1 class="text-2xl font-bold uppercase tracking-wide text-yellow-300 border-b border-white/20 pb-2">

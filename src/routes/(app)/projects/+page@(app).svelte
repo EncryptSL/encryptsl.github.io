@@ -1,11 +1,14 @@
 <script>
+  import Seo from "$lib/components/Seo.svelte";
   import projects from "$lib/data/projects.yml";
 </script>
 
-<svelte:head>
-	<title>EncryptSL - Projects</title>
-	<meta name="description" content="I'm a Software Developer focused on robust back-end systems using Kotlin and PHP." />
-</svelte:head>
+<Seo
+  title="EncryptSL - Projects"
+  description="I'm a Software Developer focused on robust back-end systems using Kotlin and PHP."
+  image="https://avatars.githubusercontent.com/u/9441083?v=4&size=500"
+  url="https://encryptsl.github.io/projects"
+/>
 
 <h1 class="text-3xl font-bold">Projects</h1>
 <div class="bg-white/5 rounded-xl shadow-lg p-6 w-full">

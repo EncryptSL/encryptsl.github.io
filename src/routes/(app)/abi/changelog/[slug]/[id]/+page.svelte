@@ -1,15 +1,15 @@
 <script lang="ts">
+  import Seo from '$lib/components/Seo.svelte';
   import { formatDate } from '$lib/utils/date.js';
-
   export let data;
 </script>
 
-<svelte:head>
-  <title>EncryptSL - ABI Changelog | {data.title}</title>
-  <link rel="canonical" href="https://encryptsl.github.io/" />
-	<meta name="description" content="{data.title}" />
-  <meta property="og:title" content="EncryptSL - {data.title}" />
-</svelte:head>
+<Seo
+  title="EncryptSL - ABI changelog | {data.title}"
+  description="{data.title}"
+  image="https://i.imgur.com/wWKKMoJ.jpeg"
+  url="https://encryptsl.github.io/abi/changelog/"
+/>
 
 <div class="flex flex-col gap-6 w-full text-white">
   <button
