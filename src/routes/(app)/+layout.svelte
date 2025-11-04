@@ -1,34 +1,15 @@
 <script>
   import "../../app.css";
   import { base } from "$app/paths";
-  import { browser } from '$app/environment';
   import { age, year } from "$lib/age";
 
   import Navbar from "$lib/components/navbar@app.svelte"
+  import { onMount } from "svelte";
 
-  import { page } from '$app/state';
+  onMount(() => {
+    document.body.classList.add("clean-background");
+  })
 
-  $: if (browser) {
-    const path = page.url.pathname;
-
-    document.body.classList.remove(
-      'abi',
-      'clean-background',
-      'day-background',
-      'night-background',
-      'linktree-background'
-    );
-
-    if (path.startsWith('/abi/changelog')) {
-      document.body.classList.add('abi');
-    } else if (path === '/') {
-      document.body.classList.add('clean-background');
-    } else if (path === '/links') {
-      document.body.classList.add('linktree-background');
-    } else {
-      document.body.classList.add('clean-background');
-    }
-  }
 </script>
 
 <svelte:head>

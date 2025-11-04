@@ -35,7 +35,7 @@
       <a
         href="{base}/abi/changelog"
         class="rounded bg-yellow-500 p-1 hover:bg-yellow-600 cursor-pointer flex justify-center items-center"
-        aria-label="links"
+        aria-label="changelog"
       >
         <span><i class="fa-brands fa-list"></i> ABI Changelog</span>
       </a>

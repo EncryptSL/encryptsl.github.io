@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit';
 import { marked } from 'marked';
 import matter from 'gray-matter';
 
-const files = import.meta.glob('../../../../../lib/abi/changelog/*.md', {
+const files = import.meta.glob('../../../../../../lib/abi/changelog/*.md', {
 	query: '?raw',
 	import: 'default',
 	eager: true
