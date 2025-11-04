@@ -7,7 +7,8 @@
 <svelte:head>
   <title>EncryptSL - ABI Changelog | {data.title}</title>
   <link rel="canonical" href="https://encryptsl.github.io/" />
-  <meta property="og:title" content="EncryptSL - Developer" />
+	<meta name="description" content="{data.title}" />
+  <meta property="og:title" content="EncryptSL - {data.title}" />
 </svelte:head>
 
 <div class="flex flex-col gap-6 w-full text-white">

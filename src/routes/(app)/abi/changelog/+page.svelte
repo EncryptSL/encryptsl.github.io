@@ -4,6 +4,10 @@
   export let data;
 </script>
 
+<svelte:head>
+  	<title>EncryptSL - ABI changelog</title>
+</svelte:head>
+
 <div class="flex flex-col gap-8 w-full">
   <h1 class="text-2xl font-bold uppercase tracking-wide text-yellow-300 border-b border-white/20 pb-2">
     Arena Breakout Infinite

@@ -42,6 +42,11 @@
   ];
 </script>
 
+<svelte:head>
+	<title>EncryptSL - Developer</title>
+	<meta name="description" content="I'm a Software Developer focused on robust back-end systems using Kotlin and PHP." />
+</svelte:head>
+
 <!-- JEDEN VELKÝ WRAPPER -->
 <!-- SEKCE: 2 karty vedle sebe -->
 <div class="flex flex-col md:flex-row gap-6 w-full">
