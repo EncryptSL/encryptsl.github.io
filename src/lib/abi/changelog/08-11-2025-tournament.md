@@ -1,5 +1,5 @@
 ---
-title: ABIS EN REGIONÁLNÍ TURNAJ: ROZVRH AKCÍ A PRAVIDLA
+title: "ABIS EN REGIONÁLNÍ TURNAJ: ROZVRH AKCÍ A PRAVIDLA"
 date: 2025-11-08
 tags: [event]
 ---
