@@ -1,4 +1,5 @@
 <script>
+  import { base } from "$app/paths";
   import { age, year } from "$lib/age";
   import Seo from "$lib/components/Seo.svelte";
 
@@ -52,85 +53,106 @@
 
 <!-- JEDEN VELKÝ WRAPPER -->
 <!-- SEKCE: 2 karty vedle sebe -->
-<div class="flex flex-col md:flex-row gap-6 w-full">
-  <!-- LEVÁ KARTA -->
-  <div class="bg-white/5 rounded-xl shadow-lg p-6 w-full md:w-80 text-center">
+<!-- LEVÁ KARTA -->
+<div
+  class="card-container mx-auto max-w-4xl flex flex-col md:flex-row bg-white/5 rounded-xl shadow-2xl overflow-hidden"
+>
+  <div class="w-full md:w-80 p-6 bg-black/10 text-center flex-shrink-0">
     <img
       src="https://avatars.githubusercontent.com/u/9441083?v=4&size=500"
       alt="avatar"
-      class="w-40 h-40 mx-auto rounded-xl border border-white mb-4"
+      class="w-40 h-40 mx-auto rounded-xl border border-gray-500 mb-4 shadow-md object-cover"
     />
-    <h2 class="text-xl font-semibold">EncryptSL</h2>
-    <p id="age" class="text-white/80 text-sm mt-1">{$age}</p>
-    <div class="text-center mt-4">
+    <h2 class="text-2xl font-semibold text-white">EncryptSL</h2>
+
+    <p id="age" class="text-white/80 text-base mt-1">
+      <strong>{$age}</strong> years old
+    </p>
+
+    <div class="text-center mt-6">
       <a
         href="https://discordapp.com/users/185744294865272832"
-        class="flex w-full justify-center bg-indigo-500 hover:bg-indigo-600 transition px-4 py-2 rounded text-sm font-medium text-white"
+        class="flex w-full justify-center items-center gap-2 bg-indigo-600 hover:bg-indigo-700 transition px-4 py-2 rounded text-base font-medium text-white shadow-lg"
       >
-        DISCORD
+        <i class="fa-brands fa-discord"></i> DISCORD
       </a>
     </div>
   </div>
 
-  <!-- PRAVÁ KARTA -->
-  <div class="bg-white/5 rounded-xl shadow-lg p-6 w-full">
-    <h1 class="text-2xl font-semibold text-center">Hi, I'm EncryptSL</h1>
-    <p class="text-gray-300 leading-relaxed text-center">
-      I'm a <strong class="text-blue-400 dark:text-blue-300 font-extrabold"
+  <div class="p-8 flex-grow">
+    <h1 class="text-3xl font-bold text-white mb-4 text-center md:text-left">
+      Hi, I'm EncryptSL 👋
+    </h1>
+
+    <p class="text-gray-300 leading-relaxed text-lg">
+      I'm a <strong class="text-blue-400 font-extrabold"
         >Software Developer</strong
       >
       focused on
-      <strong class="text-gray-200 dark:text-gray-50"
-        >robust back-end systems</strong
-      >
-      using
-      <strong class="text-yellow-400 dark:text-yellow-300 font-extrabold"
-        >Kotlin</strong
-      >
-      and
-      <strong class="text-yellow-400 dark:text-yellow-300 font-extrabold"
-        >PHP</strong
-      >. While I work in an industrial setting, my passion lies in developing
-      <strong class="text-purple-400 dark:text-purple-300 font-extrabold"
-        >large-scale Open Source projects</strong
-      >
-      like
-      <strong class="text-green-400 dark:text-green-300 font-extrabold"
-        >LiteEco</strong
-      >. I love building
-      <strong class="text-blue-400 dark:text-blue-300"
-        >new programs and plugins</strong
-      >
-      from scratch, constantly seeking ways to
-      <strong class="text-pink-400 dark:text-pink-300 font-extrabold"
-        >optimize performance</strong
-      >
-      and
-      <strong class="text-pink-400 dark:text-pink-300 font-extrabold"
-        >improve existing codebases</strong
-      >. If you're looking for a more in-depth view of my contributions,
-      especially within the
-      <strong class="text-gray-200 dark:text-gray-50"
-        >developer community</strong
-      >, check out my projects below!
+      <strong class="text-yellow-400 font-extrabold">Kotlin</strong>,
+      <strong class="text-yellow-400 font-extrabold">PHP</strong>, and the
+      <strong class="text-indigo-400 font-extrabold">Nette framework</strong>. I
+      created a PaperMC plugin that is actively used by over
+      <strong class="text-green-400 font-extrabold">100 servers</strong> to
+      date, with
+      <strong class="text-green-400 font-extrabold">27,899 downloads</strong>.
     </p>
 
-    <!-- Jazyky -->
-    <div class="max-w-sm rounded p-3 mx-auto mt-4">
-      <h2 class="text-1xl font-semibold text-center">Spoken Languages</h2>
-      <div class="flex flex-wrap items-center justify-center gap-2">
+    <p class="text-gray-300 leading-relaxed text-lg mt-4">
+      In addition to development, I have experience managing Minecraft servers
+      as an
+      <strong class="text-orange-400 font-semibold">administrator</strong>,
+      <strong class="text-orange-400 font-semibold">moderator</strong>, and
+      <strong class="text-orange-400 font-semibold">plugin developer</strong>
+      <a
+        href="{base}/minecraft"
+        class="text-white hover:text-blue-400 font-semibold transition underline"
+        >[Minecraft Experience]</a
+      >. My core expertise includes
+      <strong class="text-pink-400 font-semibold"
+        >code and project optimization</strong
+      >, and I am an expert in
+      <strong class="text-purple-400">analytics and copywriting</strong>.
+    </p>
+
+    <p class="text-gray-300 leading-relaxed text-lg mt-4">
+      I love creating
+      <strong class="text-red-400 font-extrabold">open source ❤️</strong>. If
+      you want to know more, feel free
+      <a
+        href="https://discordapp.com/users/185744294865272832"
+        class="text-white hover:text-blue-400 font-semibold transition underline"
+        target="_blank"
+        title="DISCORD">contact me</a
+      > !
+    </p>
+
+    <hr class="my-6 border-gray-700" />
+
+    <div class="mt-6">
+      <h2
+        class="text-xl font-semibold text-white mb-3 text-center md:text-left"
+      >
+        Spoken Languages 🗣️
+      </h2>
+      <div
+        class="flex flex-wrap items-center justify-center md:justify-start gap-2"
+      >
         <span
-          class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded"
-          >Czech</span
+          class="bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-sm"
         >
+          Czech - Native
+        </span>
         <span
-          class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded"
-          >English</span
+          class="bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-sm"
         >
+          English - B2
+        </span>
         <span
-          class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded"
-          >Russian</span
+          class="bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-sm"
         >
+          Russian - A2
+        </span>
       </div>
     </div>
   </div>

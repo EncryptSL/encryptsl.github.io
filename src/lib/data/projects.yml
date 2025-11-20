@@ -1,23 +1,27 @@
 projects:
   - name: Echelon
     url: https://github.com/encryptsl/echelon
-    description: Kotlin Private Discord Bot
+    description: Discord private bot created in Kotlin
 
   - name: ZenBeat
     url: "https://github.com/encryptsl/zenbeat"
-    description: Kotlin Private Discord Music Bot
+    description: Discord Music bot created in Kotlin
 
   - name: LiteEco
     url: https://github.com/encryptsl/liteeco
-    description: Paper Economy Plugin with Multi currency support
+    description: Minecraft PaperMC modern multiple currency plugin in Kotlin
 
   - name: PandaProject
     url: https://panda.cekuj.net/
-    description: Nette app with REST API for image fetching
+    description: PHP application created in Nette Framework with REST-API for animals images
+
+  - name: Minecraft Webshop
+    url: https://mcishop.mzf.cz
+    description: Minecraft PHP application created in Nette Framework, JQuery, Naja using RCON for connection to server. Included Shop basket, ACP and other stuff.
 
   - name: CensorReloaded
     url: https://www.spigotmc.org/resources/censor-reloaded-advanced-chat-filter.14752
-    description: Java Bukkit Chat Plugin
+    description: Java Bukkit Chat Control plugin
 
   - name: GameMax Revolt Showcase
     url: https://www.youtube.com/shorts/062Igi5guz0

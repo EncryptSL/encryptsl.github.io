@@ -1,7 +1,7 @@
 <script>
   import "../../app.css";
   import { base } from "$app/paths";
-  import { age, year } from "$lib/age";
+  import { year } from "$lib/age";
 
   import Navbar from "$lib/components/navbar@app.svelte"
   import { onMount } from "svelte";
@@ -24,7 +24,7 @@
   >
     <!-- JEDEN VELKÝ WRAPPER -->
     <div
-      class="glass bg-slate-800/60 rounded-2xl shadow-2xl p-8 w-full text-white border border-transparent hover:border-blue-500 transition duration-200 flex flex-col gap-8"
+      class="bg-slate-800/60 p-8 w-full text-white border-2 border-blue-500 flex flex-col gap-8"
     >
       <Navbar />
       <slot />

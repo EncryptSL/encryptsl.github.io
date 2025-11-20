@@ -1,0 +1,35 @@
+minecraft_history:
+  - year: "2012-2013"
+    title: "Server Unknown" 
+    description: "Minigame map and server spawn designer/builder."
+    role: "Builder"
+
+  - year: "2013-2014"
+    title: "FajnCraft" 
+    description: "Managing game chat, server and player activities, proficient in conflict/dispute resolution, and ensuring a stable and engaging player environment. Specializing in community management and the social dynamics of the game."
+    role: "Admin"
+
+  - year: "2014-2015"
+    title: "craft-placek.eu" 
+    description: "Managing game chat, server and player activities, proficient in conflict/dispute resolution, and ensuring a stable and engaging player environment. Specializing in community management and the social dynamics of the game."
+    role: "Admin"
+
+  - year: "2016-2018"
+    title: "jokerland.eu (Survival, Economy RPG)"
+    description: "Managing game chat and player activities, proficient in conflict/dispute resolution, and ensuring a stable and engaging player environment. Specializing in community management and the social dynamics of the game."
+    role: "Admin/Mod"
+
+  - year: "2016-2018"
+    title: "archa.tode.cz (Archa Joker Premium)"
+    description: "Managing SkyBlock, Slimefun, and server economy, including complete game server setup and overseeing smooth server operation."
+    role: "Developer/Admin"
+
+  - year: "2018-2019"
+    title: "ShadowLand"
+    description: "Minecraft server owner and plugin developer, specializing in the administration of a PvP-focused Factions server."
+    role: "Owner/Admin/Developer"
+
+  - year: "2023-2024"
+    title: "NeverLand (Private Vanilla Server)"
+    description: "Server lifecycle management (setup, deployment, and ongoing operation), active troubleshooting and performance optimization, alongside developing custom, vanilla-friendly plugins."
+    role: "Admin/Developer"
