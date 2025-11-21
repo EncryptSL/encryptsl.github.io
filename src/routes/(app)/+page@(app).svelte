@@ -92,7 +92,7 @@
       <strong class="text-yellow-400 font-extrabold">Kotlin</strong>,
       <strong class="text-yellow-400 font-extrabold">PHP</strong>, and the
       <strong class="text-indigo-400 font-extrabold">Nette framework</strong>. I
-      created a PaperMC plugin that is actively used by over
+      created a LiteEco plugin that is actively used by over
       <strong class="text-green-400 font-extrabold">100 servers</strong> to
       date, with
       <strong class="text-green-400 font-extrabold">27,899 downloads</strong>.
