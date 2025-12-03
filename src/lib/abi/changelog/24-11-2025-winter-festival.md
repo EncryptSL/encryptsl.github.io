@@ -53,4 +53,4 @@ Ještě jednou děkujeme za vaši cennou zpětnou vazbu a návrhy!
 Přejeme vám příjemné hraní!
 
 Tým Arena Breakout: Infinite
-25. listopadu 2025
+24. listopadu 2025
