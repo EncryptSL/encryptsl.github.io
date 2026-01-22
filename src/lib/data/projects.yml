@@ -3,12 +3,10 @@ projects:
     url: https://github.com/encryptsl/echelon
     description: Discord private bot created in Kotlin
 
-  - name: ZenBeat
-    url: "https://github.com/encryptsl/zenbeat"
-    description: Discord Music bot created in Kotlin
-
   - name: LiteEco
     url: https://github.com/encryptsl/liteeco
+    wiki: https://liteeco.github.io/
+    metrics: https://bstats.org/signatures/bukkit/liteeco.svg
     description: Minecraft PaperMC modern multiple currency plugin in Kotlin
 
   - name: PandaProject

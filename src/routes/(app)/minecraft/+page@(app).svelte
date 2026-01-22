@@ -1,8 +1,36 @@
-<script>
+<script lang="ts">
   import Seo from "$lib/components/Seo.svelte";
   import history from "$lib/data/minecraft_experience.yml";
-</script>
 
+  import { fly } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
+
+  let visibleIndices = new Set();
+
+  function observer(node: any, index: any) {
+    const intersectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visibleIndices = new Set(visibleIndices.add(index));
+            intersectionObserver.unobserve(node);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      },
+    );
+
+    intersectionObserver.observe(node);
+
+    return {
+      destroy() {
+        intersectionObserver.disconnect();
+      },
+    };
+  }
+</script>
 
 <Seo
   title="EncryptSL - Minecraft Experience"
@@ -12,31 +40,59 @@
 />
 
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-4xl font-extrabold text-white text-center mb-12">
-        My Minecraft Experience ⛏️
-    </h2>
+  <h2 class="text-4xl font-extrabold text-white text-center mb-12">
+    My Minecraft Experience ⛏️
+  </h2>
 
-    <div class="relative">
-        
-        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-700"></div>
+  <div class="relative">
+    <div
+      class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gray-700"
+    ></div>
 
-        {#each history.minecraft_history as item, i}
-            
-            <div class="relative mb-8 flex justify-between items-center w-full {i % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}">
-                
-                <div class="w-full md:w-5/12 p-4 rounded-xl shadow-lg bg-gray-800 text-gray-200 border-l-4 {i % 2 === 0 ? 'md:border-l-0 md:border-r-4' : 'border-l-4'} border-blue-500 hover:shadow-blue-500/30 transition duration-300">
-                    <h3 class="text-xl font-bold mb-1 text-blue-400">{item.title}</h3>
-                    <p class="text-sm italic text-gray-400 mb-2">{item.year}</p>
-                    <p class="text-base">{item.description}</p>
-                    <span class="inline-block mt-3 px-3 py-1 bg-blue-600 rounded-full text-xs font-semibold uppercase">{item.role}</span>
-                </div>
-
-                <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-blue-500 shadow-xl border-4 border-gray-900 z-10 flex items-center justify-center">
-                    <span class="text-xs font-bold text-white">{i + 1}</span>
-                </div>
-
-                <div class="hidden md:block w-5/12"></div>
+    {#each history.minecraft_history as item, i}
+      <div
+        use:observer={i}
+        class="min-h-[150px] relative mb-8 flex items-center w-full {i % 2 === 0
+          ? 'md:flex-row-reverse'
+          : 'md:flex-row'}"
+      >
+        {#if visibleIndices.has(i)}
+          <div
+            class="flex items-center w-full {i % 2 === 0
+              ? 'md:flex-row-reverse'
+              : 'md:flex-row'}"
+            transition:fly={{
+              x: i % 2 === 0 ? 100 : -100,
+              duration: 1000,
+              easing: quintOut,
+            }}
+          >
+            <div
+              class="w-full ml-10 md:ml-0 md:w-5/12 p-4 rounded-xl shadow-lg bg-gray-800 text-gray-200 border-l-4 {i %
+                2 ===
+              0
+                ? 'md:border-l-0 md:border-r-4'
+                : 'md:border-l-4'} border-blue-500 hover:shadow-blue-500/30 transition duration-300"
+            >
+              <h3 class="text-xl font-bold mb-1 text-blue-400">{item.title}</h3>
+              <p class="text-sm italic text-gray-400 mb-2">{item.year}</p>
+              <p class="text-base">{item.description}</p>
+              <span
+                class="inline-block mt-3 px-3 py-1 bg-blue-600 rounded-full text-xs font-semibold uppercase"
+                >{item.role}</span
+              >
             </div>
-        {/each}
-    </div>
+
+            <div
+              class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-blue-500 shadow-xl border-4 border-gray-900 z-10 flex items-center justify-center"
+            >
+              <span class="text-xs font-bold text-white">{i + 1}</span>
+            </div>
+
+            <div class="hidden md:block w-5/12"></div>
+          </div>
+        {/if}
+      </div>
+    {/each}
+  </div>
 </div>

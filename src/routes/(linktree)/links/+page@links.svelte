@@ -29,15 +29,16 @@
 
     <div class="space-y-4">
       {#each linksData.links as link}
-      <a
-        href="{link.link}"
-        target="_blank"
-        class="block {link.background}
+        <a
+          href={link.link}
+          target="_blank"
+          class="block {link.background}
                        transition duration-200 py-3 rounded-lg text-white font-semibold text-lg
                        shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-75"
-      >
-        <i class="{link.icon}"></i> {link.title.toUpperCase()}
-      </a>
+        >
+          <i class={link.icon}></i>
+          {link.title.toUpperCase()}
+        </a>
       {/each}
       <a
         href="{base}/"
