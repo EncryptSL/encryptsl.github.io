@@ -1,5 +1,5 @@
 <script>
-  import { base } from "$app/paths";
+  import { resolve } from "$app/paths";
   import { year } from "$lib/age";
   import linksData from "$lib/data/social.yml";
 </script>
@@ -18,7 +18,7 @@
     <img
       src="https://avatars.githubusercontent.com/u/9441083?v=4&size=500"
       alt="avatar"
-      class="w-36 h-36 mx-auto rounded-full border-4 border-green-500 shadow-xl mb-6 object-cover"
+      class="w-36 h-36 mx-auto rounded-full shadow-xl mb-6 object-cover"
     />
 
     <h1 class="text-3xl font-bold text-white mb-2">EncryptSL</h1>
@@ -41,7 +41,7 @@
         </a>
       {/each}
       <a
-        href="{base}/"
+        href="{resolve("/")}"
         class="block bg-green-700 hover:bg-green-800 active:bg-gray-900
                        transition duration-200 py-3 rounded-lg text-white font-semibold text-lg
                        shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-75"

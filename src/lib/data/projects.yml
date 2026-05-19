@@ -1,17 +1,9 @@
 projects:
-  - name: Echelon
-    url: https://github.com/encryptsl/echelon
-    description: Discord private bot created in Kotlin
-
   - name: LiteEco
     url: https://github.com/encryptsl/liteeco
     wiki: https://liteeco.github.io/
     metrics: https://bstats.org/signatures/bukkit/liteeco.svg
     description: Minecraft PaperMC modern multiple currency plugin in Kotlin
-
-  - name: PandaProject
-    url: https://panda.cekuj.net/
-    description: PHP application created in Nette Framework with REST-API for animals images
 
   - name: Minecraft Webshop
     url: https://mcishop.mzf.cz
@@ -19,6 +11,7 @@ projects:
 
   - name: CensorReloaded
     url: https://www.spigotmc.org/resources/censor-reloaded-advanced-chat-filter.14752
+    maintained: false
     description: Java Bukkit Chat Control plugin
 
   - name: GameMax Revolt Showcase

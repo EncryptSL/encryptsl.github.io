@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { base } from "$app/paths";
+  import { resolve } from "$app/paths";
   import { age, year } from "$lib/age";
   import Seo from "$lib/components/Seo.svelte";
   import { fade, fly, scale } from "svelte/transition";
@@ -51,7 +51,7 @@
       title: "💽 Components",
       items: [
         "CZC.Gaming Reaper Keyboard",
-        "Bloody Sport Series Mouse",
+        "Logitech G203 Lightsync",
         '23.8" MSI PRO MP243XW',
       ],
     },
@@ -123,54 +123,41 @@
         in:fly={{ x: 40, duration: 1000, delay: 400, easing: quintOut }}
         class="p-8 flex-grow"
       >
-        <h1 class="text-3xl font-bold text-white mb-4 text-center md:text-left">
+        <h1
+          class="text-4xl font-extrabold text-white mb-6 text-center md:text-left"
+        >
           Hi, I'm EncryptSL 👋
         </h1>
 
         <p class="text-gray-300 leading-relaxed text-lg">
-          I'm a <strong class="text-blue-400 font-extrabold"
+          I'm a <strong class="text-blue-400 font-bold"
             >Software Developer</strong
           >
-          focused on
-          <strong class="text-yellow-400 font-extrabold">Kotlin</strong>,
-          <strong class="text-yellow-400 font-extrabold">PHP</strong>, and the
-          <strong class="text-indigo-400 font-extrabold">Nette framework</strong
-          >. I created a LiteEco plugin that is actively used by over
-          <strong class="text-green-400 font-extrabold">100 servers</strong> to
-          date, with
-          <strong class="text-green-400 font-extrabold">27,899 downloads</strong
-          >.
+          specializing in
+          <strong class="text-yellow-400 font-bold">Kotlin</strong> and
+          <strong class="text-yellow-400 font-bold">PHP</strong>. I developed
+          the LiteEco plugin, which has reached over
+          <strong class="text-green-400 font-bold">27K+ downloads</strong>, and
+          I work on various projects.
         </p>
 
         <p class="text-gray-300 leading-relaxed text-lg mt-4">
-          In addition to development, I have experience managing Minecraft
-          servers as an
-          <strong class="text-orange-400 font-semibold">administrator</strong>,
-          <strong class="text-orange-400 font-semibold">moderator</strong>, and
-          <strong class="text-orange-400 font-semibold">plugin developer</strong
+          Aside from coding, I focus on <strong class="text-pink-400 font-bold"
+            >video production and editing</strong
+          >. When I'm away from my desk, you'll usually find me at the
+          <strong class="text-purple-400 font-bold">gym</strong>, conquering
+          <strong class="text-purple-400 font-bold">via ferratas</strong>, or
+          <strong class="text-purple-400 font-bold">alpinism</strong>.
+        </p>
+
+        <div class="mt-6 text-center md:text-left">
+          <a
+            href={resolve("/minecraft")}
+            class="text-blue-400 hover:text-blue-300 font-semibold transition underline text-lg"
           >
-          <a
-            href="{base}/minecraft"
-            class="text-white hover:text-blue-400 font-semibold transition underline"
-            >[Minecraft Experience]</a
-          >. My core expertise includes
-          <strong class="text-pink-400 font-semibold"
-            >code and project optimization</strong
-          >, and I am an expert in
-          <strong class="text-purple-400">analytics and copywriting</strong>.
-        </p>
-
-        <p class="text-gray-300 leading-relaxed text-lg mt-4">
-          I love creating
-          <strong class="text-red-400 font-extrabold">open source ❤️</strong>.
-          If you want to know more, feel free
-          <a
-            href="https://discordapp.com/users/185744294865272832"
-            class="text-white hover:text-blue-400 font-semibold transition underline"
-            target="_blank"
-            title="DISCORD">contact me</a
-          > !
-        </p>
+            [Explore my Minecraft Experience]
+          </a>
+        </div>
 
         <hr class="my-6 border-gray-700" />
 

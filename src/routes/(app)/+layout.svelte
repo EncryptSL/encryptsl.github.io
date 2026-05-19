@@ -1,6 +1,6 @@
 <script>
   import "../../app.css";
-  import { base } from "$app/paths";
+  import { resolve } from "$app/paths";
   import { year } from "$lib/age";
 
   import Navbar from "$lib/components/navbar@app.svelte"
@@ -32,7 +32,7 @@
         class="bg-white/5 rounded-xl shadow-lg text-white/80 text-center text-sm p-4 w-full"
       >
         © <span id="year">{$year}</span>
-        <a href="{base}/" class="text-yellow-300">EncryptSL</a> • Built with ❤️ using
+        <a href="{resolve("/")}" class="text-yellow-300">EncryptSL</a> • Built with ❤️ using
         SvelteKit & TailwindCSS
       </footer>
     </div>

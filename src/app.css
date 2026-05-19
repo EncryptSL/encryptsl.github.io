@@ -11,6 +11,7 @@ body.clean-background {
 
 body.linktree-background {
   background: url("@assets/linktree.webp") no-repeat center center fixed;
+  background: #16262e;
   background-size: cover;
 }
 
@@ -104,7 +105,7 @@ body.linktree-background {
 }
 
 .linktree-card:hover {
-  box-shadow: 0 0 15px 3px rgba(14, 233, 98, 0.6);
+  box-shadow: 0 0 15px 3px rgba(14, 208, 233, 0.6);
   transform: scale(1.01);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   will-change: transform, box-shadow;

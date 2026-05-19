@@ -13,21 +13,6 @@ function toSlug(title) {
     .trim();
 }
 
-const changelogDir = 'src/lib/abi/changelog';
-
-const changelogFiles = readdirSync(changelogDir)
-  .filter((f) => f.endsWith('.md'))
-  .map((filename) => {
-    const filePath = path.join(changelogDir, filename);
-    const raw = readFileSync(filePath, 'utf-8');
-    const { data } = matter(raw);
-
-    const date = filename.replace('.md', '');
-    const slug = toSlug(data.title ?? 'untitled');
-
-    return `/abi/changelog/${slug}/${date}`;
-  });
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
@@ -54,7 +39,8 @@ const config = {
             // base: process.argv.includes('dev') ? '' : '/my-repo',
         },
 		prerender: {
-			entries: ['*', ...changelogFiles]
+      handleUnseenRoutes: 'ignore',
+			entries: ['*']
 		}
 	},
 }

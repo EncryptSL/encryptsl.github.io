@@ -4,11 +4,12 @@
   export let data;
 </script>
 
+<!-- Přidána obranná podmínka i do SEO pro případ, že by meta chybělo úplně -->
 <Seo
-  title="EncryptSL - ABI changelog | {data.title}"
-  description={data.title}
+  title="EncryptSL - Blog | {data.meta?.title || 'Article'}"
+  description={data.meta?.title || ''}
   image="https://i.imgur.com/wWKKMoJ.jpeg"
-  url="https://encryptsl.github.io/abi/changelog/"
+  url="https://encryptsl.github.io/blog/{data.year}/{data.slug}"
 />
 
 <div class="flex flex-col gap-6 w-full text-white">
@@ -16,26 +17,27 @@
     on:click={() => history.back()}
     class="self-start text-yellow-300 border border-yellow-300 px-4 py-2 rounded-md text-sm font-semibold hover:bg-yellow-300 hover:text-slate-900 transition duration-200"
   >
-    ← Zpět
+    ← Back
   </button>
 
   <h1
     class="text-2xl font-bold uppercase tracking-wide text-yellow-300 border-b border-white/20 pb-2"
   >
-    {data.title}
+    {data.meta?.title || 'Untitled'}
   </h1>
 
-  {#if data.date}
+  {#if data.meta?.date}
     <p class="text-white/70 text-sm">
       <span class="font-semibold text-white">📅 Date:</span>
-      {formatDate(data.date)}
+      {formatDate(data.meta.date)}
     </p>
   {/if}
 
-  {#if data.tags.length}
+  <!-- OPRAVA: Bezpečné ověření, zda tagy existují a jsou polem -->
+  {#if data.meta?.tags && Array.isArray(data.meta.tags) && data.meta.tags.length > 0}
     <div class="flex flex-wrap gap-2 text-sm">
       <span class="font-semibold text-white">🏷️ Tags:</span>
-      {#each data.tags as tag}
+      {#each data.meta.tags as tag}
         <span
           class="bg-slate-700 text-yellow-300 px-2 py-1 rounded-full text-xs font-medium"
         >
@@ -46,12 +48,11 @@
   {/if}
 
   <div class="prose prose-invert prose-sm sm:prose-base max-w-none markdown">
-    {@html data.html}
+    {@html data.content}
   </div>
 
-  <div
-    class="p-4 rounded-md border-l-4 border-blue-500 bg-blue-100 text-blue-700"
-  >
+  <!-- Pokud je to prázdný modrý box na konci, nechal jsem ho, jen opravil drobné formátování -->
+  <div class="p-4 rounded-md border-l-4 border-blue-500 bg-blue-950/40 text-blue-300">
     <div class="flex">
       <div class="flex-shrink-0">
         <svg
@@ -67,19 +68,6 @@
             clip-rule="evenodd"
           />
         </svg>
-      </div>
-      <div class="ml-3">
-        <h3 class="text-sm font-medium">Important Information</h3>
-        <div class="mt-2 text-sm">
-          <p class="font-bold">
-            All news is sourced from the official Arena Breakout: Infinite
-            website or Discord.
-          </p>
-          <p class="mt-1">
-            Please note that this site is <b>not</b> affiliated with or sponsored
-            by the creators of Arena Breakout: Infinite.
-          </p>
-        </div>
       </div>
     </div>
   </div>
