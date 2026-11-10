@@ -20,7 +20,7 @@
 
 <div class="w-full border-b border-indigo-500 mb-5">
   <div class="flex flex-wrap items-end justify-between gap-3 text-sm text-white mb-2">
-    
+
     <div class="flex flex-col justify-center leading-tight pb-1">
       <span class="text-[9px] uppercase tracking-tighter text-gray-500 font-bold">
         Today is his name day
@@ -50,12 +50,6 @@
           </a>
         </div>
       {/if}
-
-      <div class="relative group inline-flex justify-center items-center">
-        <a href="{resolve("/blog")}" class="rounded bg-yellow-600/80 px-2 py-1 hover:bg-yellow-600 transition flex items-center gap-2">
-          <i class="fa-solid fa-eye"></i> <span>Blog</span>
-        </a>
-      </div>
 
       <div class="relative group inline-flex justify-center items-center">
         <a href="{resolve("/links")}" class="rounded bg-green-600/80 px-2 py-1 hover:bg-green-600 transition flex items-center gap-2">

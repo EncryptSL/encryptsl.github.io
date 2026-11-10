@@ -3,17 +3,21 @@ projects:
     url: https://github.com/encryptsl/liteeco
     wiki: https://liteeco.github.io/
     metrics: https://bstats.org/signatures/bukkit/liteeco.svg
+    status: active
     description: Minecraft PaperMC modern multiple currency plugin in Kotlin
 
   - name: Minecraft Webshop
     url: https://mcishop.mzf.cz
+    status: active
     description: Minecraft PHP application created in Nette Framework, JQuery, Naja using RCON for connection to server. Included Shop basket, ACP and other stuff.
 
   - name: CensorReloaded
     url: https://www.spigotmc.org/resources/censor-reloaded-advanced-chat-filter.14752
+    status: archived
     maintained: false
     description: Java Bukkit Chat Control plugin
 
   - name: GameMax Revolt Showcase
     url: https://www.youtube.com/shorts/062Igi5guz0
+    status: active
     description: My current PC case

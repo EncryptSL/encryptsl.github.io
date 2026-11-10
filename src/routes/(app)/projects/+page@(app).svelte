@@ -43,7 +43,7 @@
         class="bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 {openProject ===
         i
           ? 'ring-2 ring-sky-500/40 bg-white/10'
-          : 'hover:bg-white/10'}"
+          : 'hover:bg-white/10'} {project.status === 'archived' ? 'opacity-75' : ''}"
       >
         <button
           on:click={() => toggleProject(i)}
@@ -54,6 +54,7 @@
               >{project.name}</span
             >
 
+            <!-- Tech Badge -->
             <span
               class="px-2 py-0.5 text-[10px] font-bold uppercase rounded border {getTechColor(
                 project.description,
@@ -67,6 +68,15 @@
                     ? "Java"
                     : "Other"}
             </span>
+
+            <!-- Status Badge for Archived/Inactive Projects -->
+            {#if project.status === "archived"}
+              <span
+                class="px-2 py-0.5 text-[10px] font-bold uppercase rounded border bg-gray-600/20 text-gray border-gray-500/30"
+              >
+                Archived / Legacy
+              </span>
+            {/if}
           </div>
 
           <svg
